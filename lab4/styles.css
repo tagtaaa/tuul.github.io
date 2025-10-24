@@ -1,0 +1,85 @@
+/* Вэбийн бүх фонт, өнгө, суурь тохиргоо */
+body {
+  /* Арын хээг зурагаар тавих */
+  background-image: url("uulen-hee.jpg");  /* энд долгионт хээгийн зургаа оруул */
+  background-repeat: repeat; /* хээг давтана */
+  background-size: 800px;    /* хээгийн хэмжээ */
+  background-color: #eaf6ff; /* цайвар цэнхэр суурь өнгө */
+
+  font-family: Arial, sans-serif; /* энгийн бичгийн фонт */
+  margin: 0; /* хуудасны гадна зайг арилгана */
+  color: #222; /* бичгийн өнгө */
+}
+
+/* CV-г бүхэлд нь голлуулна */
+.cv {
+  width: 900px;
+  margin: 40px auto;
+  background-color: white; /* цагаан карт дотор */
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Дээд хэсэг — 2 хэсэг (зураг + мэдээлэл) */
+.hero {
+  display: flex;
+}
+
+/* Зүүн тал — зурагтай цэнхэр хайрцаг */
+.hero-left {
+  background-color: #1565C0; /* хөх өнгө */
+  color: white; /* бичгийг цагаанаар */
+  width: 300px;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Зураг дугуй хүрээтэй байх */
+.hero-left img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  border: 5px solid white;
+  object-fit: cover;
+}
+
+/* Мэргэжлийн нэр */
+.hero-left .badge {
+  background-color: #1976D2;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Баруун тал — текст мэдээлэл */
+.hero-right {
+  flex: 1;
+  padding: 30px;
+}
+
+/* Гарчиг */
+.hero-right h1 {
+  color: #1565C0;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Дэд гарчиг */
+.hero-right p {
+  margin-bottom: 8px;
+}
+
+/* Холбоо барих хайрцгууд */
+.info {
+  margin-top: 15px;
+}
+
+.info div {
+  background-color: #eaf3ff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin: 5px 0;
+}
