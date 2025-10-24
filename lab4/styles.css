@@ -1,85 +1,165 @@
-/* Вэбийн бүх фонт, өнгө, суурь тохиргоо */
-body {
-  /* Арын хээг зурагаар тавих */
-  background-image: url("uulen-hee.jpg");  /* энд долгионт хээгийн зургаа оруул */
-  background-repeat: repeat; /* хээг давтана */
-  background-size: 800px;    /* хээгийн хэмжээ */
-  background-color: #eaf6ff; /* цайвар цэнхэр суурь өнгө */
 
-  font-family: Arial, sans-serif; /* энгийн бичгийн фонт */
-  margin: 0; /* хуудасны гадна зайг арилгана */
-  color: #222; /* бичгийн өнгө */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;     
+  color: #1b1f23;
+  background-image: url("uulen-hee.jpg");
+  background-size: 800px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-color: #eaf6ff;
 }
 
-/* CV-г бүхэлд нь голлуулна */
-.cv {
-  width: 900px;
-  margin: 40px auto;
-  background-color: white; /* цагаан карт дотор */
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+.cv{ 
+  max-width: 1100px; 
+  margin: 40px auto; 
+  padding: 0 18px; 
+}
+
+.hero{
+  background: #fff;
+  border-radius: 20px;        
+  border: 1px solid #e5e7eb;   
   overflow: hidden;
 }
-
-/* Дээд хэсэг — 2 хэсэг (зураг + мэдээлэл) */
-.hero {
-  display: flex;
+.hero-grid{ 
+  display: grid; 
+  grid-template-columns: 320px 1fr; 
 }
 
-/* Зүүн тал — зурагтай цэнхэр хайрцаг */
-.hero-left {
-  background-color: #1565C0; /* хөх өнгө */
-  color: white; /* бичгийг цагаанаар */
-  width: 300px;
-  text-align: center;
-  padding: 30px;
+.hero-left{
+  background: linear-gradient(180deg, #1676C5, #0D4FA2);
+  color: #fff;
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 18px;
+  align-items: center; justify-content: center;
 }
 
-/* Зураг дугуй хүрээтэй байх */
-.hero-left img {
-  width: 150px;
-  height: 150px;
-  border-radius: 20px;
-  border: 5px solid white;
-  object-fit: cover;
+.avatar{
+  width: 160px; height: 160px; object-fit: cover;
+  border-radius: 20px; border: 5px solid #fff;
 }
 
-/* Мэргэжлийн нэр */
-.hero-left .badge {
-  background-color: #1976D2;
-  border-radius: 30px;
-  padding: 10px 20px;
-  margin-top: 15px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-/* Баруун тал — текст мэдээлэл */
-.hero-right {
-  flex: 1;
-  padding: 30px;
-}
-
-/* Гарчиг */
-.hero-right h1 {
-  color: #1565C0;
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-/* Дэд гарчиг */
-.hero-right p {
-  margin-bottom: 8px;
-}
-
-/* Холбоо барих хайрцгууд */
-.info {
-  margin-top: 15px;
-}
-
-.info div {
-  background-color: #eaf3ff;
+.badge{
+  background: rgba(255,255,255,.2);
+  color: #fff;
   padding: 8px 12px;
-  border-radius: 10px;
-  margin: 5px 0;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.hero-right{ padding: 28px 30px; }
+.title{ 
+  font-size: 32px; 
+  margin: 0 0 8px; 
+  color: #1E4BBE; 
+}
+.subtitle{ 
+  margin: 0 0 14px; 
+  color: #6b7280; 
+}
+.intro{ 
+  margin: 12px 0 0; 
+  max-width: 60ch; 
+  color: #374151; 
+}
+
+.grid{ 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 22px; margin-top: 24px; 
+}
+.card{ 
+  background: #fff; 
+  border: 1px solid #e5e7eb; 
+  border-radius: 14px; 
+  padding: 22px; 
+}
+
+.section-title{ 
+  display:flex; 
+  align-items:center; 
+  gap:10px; 
+  margin:0 0 14px; 
+}
+.dot{ 
+  width:10px; 
+  height:10px; 
+  border-radius:50%; 
+  background:#1E4BBE; 
+}
+
+.timeline{ 
+  position: relative; 
+  margin: 8px 0 0; 
+  padding-left: 22px; 
+}
+.timeline::before{ 
+  content:""; 
+  position:absolute; 
+  left:9px; 
+  top:0; 
+  bottom:0; 
+  width:2px; 
+  background:#1E4BBE; 
+}
+.tl-item{ 
+  position: relative; 
+  margin: 0 0 18px; 
+}
+.tl-item::before{ 
+  content:""; 
+  position:absolute; 
+  left:-16px; 
+  top:.25em; 
+  width:10px; 
+  height:10px; 
+  border-radius:50%; 
+  background:#fff; 
+  border:3px solid #1E4BBE; 
+}
+.tl-meta{ 
+  font-weight: bold; 
+  color:#1E4BBE; 
+}
+.tl-place{ color:#111; }
+.tl-desc{ 
+  color:#485266; 
+  margin:6px 0 0; 
+}
+
+.pill{ 
+  display:inline-block; 
+  padding:8px 12px; 
+  border-radius:999px; 
+  background:#EEF2FF; 
+  color:#1E3A8A; 
+  border:1px solid #dbe2ff; 
+}
+.chip{ 
+  display:inline-block; 
+  padding:6px 10px; 
+  border-radius:999px; 
+  background:#E0E7FF; 
+  color:#1E40AF; 
+  margin:4px 6px 0 0; 
+}
+.bullets{ 
+  margin:8px 0 0 18px; 
+  color:#374151; 
+}
+
+.info{ 
+  display:flex; 
+  gap:14px; 
+  flex-wrap:wrap; 
+  margin-top:16px; 
+}
+.info .ibox{ 
+  background:#EFF6FF; 
+  border:1px solid #dbeafe; 
+  padding:10px 14px; 
+  border-radius:12px; 
 }
