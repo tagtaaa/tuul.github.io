@@ -1,10 +1,112 @@
 <!DOCTYPE html>
-<html>
-    <head>  
-        <title>Welcome to Internet Technology Fundamentals</title>
-    </head>
-    <body>
-        <h1>Welcome to laboratory 1</h1>
-        <p> Hi, guys. Намайг Г.Энхтуул гэдэг. Одоо Мэдээллийн технологи, электроникийн сургуулийн 4-р түвшиний оюутан.</p>
-    </body>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Demo — HTML/CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Гадны CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Миний жижиг демо</h1>
+  </header>
+
+  <nav>
+    <!-- 3 линк (href ажиллана) -->
+    <a href="#hero">Нүүр</a>
+    <a href="#content">Контент</a>
+    <a href="#media">Медиа</a>
+  </nav>
+
+  <main class="layout" id="content">
+    <!-- SECTION: background зурагтай, #hero -->
+    <section id="hero" class="hero-section">
+      <h2>Hero хэсэг (background зурагтай)</h2>
+      <p>Энэ хэсэг дээр section-ийн background зураг тавьсан.</p>
+
+      <!-- figure + figcaption (img + alt) -->
+      <figure>
+        <img src="sample.jpg" alt="Монголын байгалийн зураг (жишээ).">
+        <figcaption>Зураг 1. Байгалийн гэрэл зураг, <em>figcaption</em> тайлбар.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ASIDE: media query үед SECTION-ийн доор шилжинэ -->
+    <aside>
+      <h3>Хажуугийн хэсэг (aside)</h3>
+      <ul>
+        <li>Эхний мөр</li>
+        <li class="emph">Хоёр дахь мөр (онцолсон)</li>
+        <li>Гурав дахь мөр</li>
+      </ul>
+    </aside>
+  </main>
+
+  <section class="boxes">
+    <h2>Box model туршлага</h2>
+
+    <!-- .box1: padding их -->
+    <div class="box box1">
+      <h3>.box1 (padding: 24px)</h3>
+      <p>Дотор талын зай ихэссэн тул хүрээ ба агуулгын хооронд завсар их.</p>
+    </div>
+
+    <!-- .box2: margin их -->
+    <div class="box box2">
+      <h3>.box2 (margin: 24px)</h3>
+      <p>Гадна талын зай ихэссэн тул хайрцгууд хоорондоо холдсон.</p>
+    </div>
+
+    <!-- div p селекторын жишээ -->
+    <div class="text-demo">
+      <h3>div p селекторын жишээ</h3>
+      <p>Энэ p нь div дотор байгаа тул тусгай өнгөтэй харагдана.</p>
+    </div>
+    <p>Харин энэ p нь div-оос гадуур байгаа тул хэвийн өнгөтэй.</p>
+  </section>
+
+  <section id="media" class="media">
+    <h2>Медиа жишээ (video + audio)</h2>
+
+    <!-- VIDEO: controls, loop, poster, 2 төрлийн source -->
+    <video width="420" controls loop poster="thumb.jpg">
+      <source src="intro.mp4" type="video/mp4">
+      <source src="intro.webm" type="video/webm">
+      Таны хөтөч видео тоглуулахгүй байна.
+    </video>
+
+    <!-- AUDIO: controls, loop, 2 төрлийн source -->
+    <audio controls loop>
+      <source src="music.mp3" type="audio/mpeg">
+      <source src="music.ogg" type="audio/ogg">
+      Таны хөтөч аудио тоглуулахгүй байна.
+    </audio>
+  </section>
+
+  <section class="box-model-diagram">
+    <h2>Box Model зураг (тайлбартай)</h2>
+    <div class="bm margin">
+      margin
+      <div class="bm border">
+        border
+        <div class="bm padding">
+          padding
+          <div class="bm content">content</div>
+        </div>
+      </div>
+    </div>
+    <p class="tip">
+      Тайлбар: <strong>padding</strong> ихэсвэл агуулга ба хүрээний хоорондох зай томорно. 
+      <strong>border</strong> ихэсвэл хүрээ зузаарна. 
+      <strong>margin</strong> ихэсвэл хайрцаг бусад элементээс холдоно.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Жижиг демо
+  </footer>
+
+</body>
 </html>
