@@ -36,7 +36,7 @@ body {
   margin: 0 0 auto;
 }
 .pink-button {
-  background: #ff1f7a;
+  background: rgb(254, 39, 75);
   color: white;
   padding: 10px 18px;
   text-decoration: none;
@@ -93,7 +93,7 @@ body {
 }
 
 .message {
-  background: #ff1f7a;
+  background: rgb(254, 39, 75);
   color: white;
   padding: 8px 10px;
   margin-bottom: 8px;
@@ -149,19 +149,18 @@ body {
   margin: 10px 0 12px;
   height: 10px;
   background: #f0f0f5;
-  border-radius: 6px;
   overflow: hidden;
 }
 .pink-line {
   width: 60%;
   height: 100%;
-  background: #ff1f7a;
+  background: rgb(254, 39, 75);
   float: left;
 }
 .green-line {
   width: 40%;
   height: 100%;
-  background: #23d6b5;
+  background: rgb(48, 240, 48);
   float: left;
 }
 .button {
