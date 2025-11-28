@@ -3,12 +3,10 @@
 }
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: Arial, sans-serif;
   background: #f4f4f8;
 }
-.bold {
-  font-weight: 700;
-}
+
 .deed {
   background: #13124f;
   color: white;
@@ -21,6 +19,7 @@ body {
 .logo-text {
   font-weight: bold;
 }
+
 .tom-tsenher {
   background: linear-gradient(135deg, #13124f, #1b1b6c);
   color: white;
@@ -32,10 +31,10 @@ body {
   padding: 0 15px;
 }
 .garchig {
-  margin: 0 0 auto;
+  margin: 0 0 8px;
 }
 .garchig-tailbar {
-  margin: 0 0 auto;
+  margin: 0 0 16px;
 }
 .pink-button {
   background: #f61067;
@@ -68,7 +67,7 @@ body {
   padding-left: 15px;
 }
 
-.гол-текст h2 {
+.text h2 {
   margin-top: 0;
 }
 
@@ -91,7 +90,7 @@ body {
   margin-top: 18px;
   background: #e1e3f0;
   padding: 10px 12px;
-  border-left: 6px solid #8ea0ff;
+  border-left: 6px solid #352ba5;
 }
 
 .message {
@@ -120,10 +119,17 @@ body {
   padding: 8px;
   margin-top: 10px;
   border-radius: 3px;
-  border: 2px solid #13124f;
-  background: #1b1b6c;
+  border: 2px solid #1b1f4a;
+  background: #1b214f;
   color: white;
 }
+.red-button {
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
 .white-hairtsag {
   background: white;
   padding: 12px;
@@ -133,12 +139,6 @@ body {
 }
 .white-hairtsag-text {
   font-size: 14px;
-}
-.red-button {
-  width: 100%;
-  margin-top: 10px;
-  border: none;
-  cursor: pointer;
 }
 .link {
   display: block;
@@ -165,6 +165,7 @@ body {
   background: #2ad392;
   float: left;
 }
+
 .button {
   text-align: center;
 }
@@ -182,6 +183,11 @@ body {
   color: white;
   padding: 20px 0;
   margin-top: 20px;
+}
+.haalt {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 .footer-text {
   margin: 0;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Daalgavar 1</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var tooText = window.prompt("Toogoo oruulna uu");
+  var too = parseInt(tooText);
+
+  var temp = too;
+  var niilber = 0;
+  var digit;
+
+  while (temp > 0) {
+    digit = temp % 10;
+    niilber = niilber + digit;
+    temp = Math.floor(temp / 10);
+  }
+
+  var huulbar = niilber;
+  var urvuu = 0;
+
+  while (huulbar > 0) {
+    digit = huulbar % 10;
+    urvuu = urvuu * 10 + digit;
+    huulbar = Math.floor(huulbar / 10);
+  }
+
+  document.writeln("<p>Oruulsan too: " + too + "</p>");
+  document.writeln("<p>Tsifruudiin niilber: " + niilber + "</p>");
+
+  if (niilber == urvuu) {
+    document.writeln("<p>Niilber ni palindrom BAINA.</p>");
+  } else {
+    document.writeln("<p>Niilber ni palindrom BISH.</p>");
+  }
+</script>
+
+</body>
+</html>

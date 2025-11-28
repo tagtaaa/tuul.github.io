@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Daalgavar 2</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var chono = 25;    
+  var tuulai = 18;   
+
+  var zaiAvah = window.prompt(
+    "chono ba tuulai hoyriin hoorondiin zaig (km) oruul:", "1"
+  );
+  var zai = parseFloat(zaiAvah);
+
+  var hurdKmh = chono - tuulai;   
+
+  var hurdKms = hurdKmh / 3600;   
+
+  var totalSeconds = Math.round(zai / hurdKms);
+
+  var minutes = Math.floor(totalSeconds / 60);
+  var seconds = totalSeconds % 60;
+
+  document.writeln("<p>zai: " + zai + " км</p>");
+  document.writeln("<p>zoru hurd: " + hurdKmh + " км/ц</p>");
+  document.writeln("<p>Chono oiroltsoogoor " + minutes +
+                   " minut " + seconds + " sekundiin daraa guitsne.</p>");
+</script>
+
+</body>
+</html>

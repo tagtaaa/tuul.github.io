@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Daalgavar 3</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var niitDavhar = 9;
+  var niitOrts = 3;
+  var davhartAil = 4;
+
+  var niitAil = niitDavhar * niitOrts * davhartAil;
+
+  var oruulsanToo = window.prompt("Tootoo (1-" + niitAil + ") oruul:", );
+  var toot = parseInt(oruulsanToo);
+
+  if (toot < 1 || toot > niitAil) {
+    document.writeln("<p>Iim toot ene hothond baihgui</p>");
+  } else {
+
+    var dugaar = toot - 1;
+    var ortsDahAil = niitDavhar * davhartAil;   
+    var orts = Math.floor(dugaar / ortsDahAil) + 1;
+    var uldegdul = dugaar % ortsDahAil;
+    var davhar = Math.floor(uldegdul / davhartAil) + 1;
+    var haalga = (uldegdul % davhartAil) + 1;
+
+    document.writeln("<p>" + toot + " toot ni:</p>");
+    document.writeln("<p>" + orts + "-r orts, " +
+                     davhar + "-r davhar, " +
+                     haalga + "-r haalga.</p>");
+  }
+</script>
+
+</body>
+</html>

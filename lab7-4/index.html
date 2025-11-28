@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Daalgavar 4 </title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var too = [];
+  var i;
+
+  for (i = 0; i < 5; i++) {
+    too[i] = parseInt(window.prompt((i+1) + "-r toog oruul:", "0"));
+  }
+
+  function gcd(a, b) {
+    a = Math.abs(a);
+    b = Math.abs(b);
+    var t;
+    while (b != 0) {
+      t = a % b;
+      a = b;
+      b = t;
+    }
+    return a;
+  }
+
+  var answer = too[0];
+  for (i = 1; i < 5; i++) {
+    answer = gcd(answer, too[i]);
+  }
+
+  document.writeln("<p>Oruulsan toonuud: " + too.join(", ") + "</p>");
+  document.writeln("<p>Hamgiin ih eronhii huvaagch: " + answer + "</p>");
+</script>
+
+</body>
+</html>
