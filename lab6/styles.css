@@ -10,6 +10,16 @@ body {
     color: #f1f1f1;
 }
 
+/* H1 нуух (SEO-д зориулсан) */
+.delgets-garchig {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .tolgoi {
     display: flex;
     justify-content: space-between;
@@ -59,6 +69,7 @@ body {
     align-items: center;
     gap: 2px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .logo-zurag {
@@ -213,11 +224,11 @@ body {
     left: 0;
 }
 
-.hajuu-sambar::-web-scrollbar {
+.hajuu-sambar::-webkit-scrollbar {
     width: 8px;
 }
 
-.hajuu-sambar::-web-scrollbar-thumb {
+.hajuu-sambar::-webkit-scrollbar-thumb {
     background-color: #717171;
     border-radius: 4px;
 }
@@ -251,6 +262,14 @@ body {
     transition: background-color 0.2s;
     border-radius: 10px;
     margin: 0 8px;
+    border: none;
+    background: none;
+    width: calc(100% - 16px);
+    text-align: left;
+}
+
+.path-element span {
+    display: inline-block;
 }
 
 .path-element img {
@@ -288,11 +307,11 @@ body {
     padding-bottom: 8px;
 }
 
-.keyword-aguulga::-web-scrollbar {
+.keyword-aguulga::-webkit-scrollbar {
     height: 6px;
 }
 
-.keyword-aguulga::-web-scrollbar-thumb {
+.keyword-aguulga::-webkit-scrollbar-thumb {
     background-color: #717171;
     border-radius: 3px;
 }
@@ -317,6 +336,7 @@ body {
     background-color: #f1f1f1;
     color: #0f0f0f;
 }
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -324,7 +344,12 @@ body {
 }
 
 .video-heseg {
-    cursor: pointer;
+    display: block;
+}
+
+.thumbnail-holboos {
+    display: block;
+    text-decoration: none;
 }
 
 .thumbnail {
@@ -333,13 +358,20 @@ body {
     background: black;
     position: relative;
     margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hugatsaa {
     position: absolute;
     bottom: 8px;
     right: 8px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 3px 6px;
     border-radius: 4px;
@@ -352,6 +384,16 @@ body {
     gap: 12px;
 }
 
+.video-medeelel > a {
+    flex-shrink: 0;
+}
+
+.channel-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 .video-delgerengui {
     flex: 1;
@@ -369,10 +411,28 @@ body {
     overflow: hidden;
 }
 
+.video-garchig a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.video-garchig a:hover {
+    color: #fff;
+}
+
 .suvag-ner {
     font-size: 13px;
     color: #aaa;
     margin-bottom: 2px;
+}
+
+.suvag-ner a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.suvag-ner a:hover {
+    color: #fff;
 }
 
 .video-meta {
