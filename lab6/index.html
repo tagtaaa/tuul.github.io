@@ -1,518 +1,302 @@
 <!DOCTYPE html>
-<html lang="mn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="YouTube шиг видео платформ - Таны дуртай видеонуудыг үзээрэй">
-    <title>YouTube - Онлайн Видео Платформ</title>
+    <meta name="description" content="Watch, share and discover millions of videos on YouTube. Browse trending content, music videos, gaming streams, and your favorite channels.">
+    <title>YouTube - Watch Videos, Music, and Live Streams</title>
     <link rel="icon" type="image/png" href="you-logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="delgets-garchig">YouTube - Онлайн Видео Үзэх Платформ</h1>
+    <h1 class="visually-hidden">YouTube - Video Sharing Platform</h1>
     
     <header class="tolgoi">
-        <nav class="tolgoi-zuun" aria-label="Үндсэн навигаци">
-            <button class="menu-button" aria-label="Цэс нээх">
+        <div class="tolgoi-zuun">
+            <button class="menu-button" aria-label="Open menu">
                 <img src="menu.png" alt="">
             </button>
-            <a href="/" class="logo" aria-label="Нүүр хуудас руу буцах">
-                <img src="you-logo.png" alt="YouTube Logo" class="logo-zurag">
+            <a href="/" class="logo" aria-label="YouTube Home">
+                <img src="you-logo.png" alt="" class="logo-zurag">
                 <span class="logo-text">YouTube</span>
             </a>
-        </nav>
+        </div>
         <div class="tolgoi-tov">
-            <form class="hailt-aguulga" role="search" aria-label="Видео хайх">
-                <input type="search" class="hailt-oruulah" placeholder="Search" aria-label="Видео хайх">
-                <button type="submit" class="hailt-button" aria-label="Хайлт хийх">
+            <div class="hailt-aguulga">
+                <input type="text" class="hailt-oruulah" placeholder="Search" aria-label="Search videos">
+                <button class="hailt-button" aria-label="Search">
                     <img src="search.png" alt="">
                 </button>
-            </form>
-            <button class="mic-button" aria-label="Дуун хайлт">
+            </div>
+            <button class="mic-button" aria-label="Search with voice">
                 <img src="mic.png" alt="">
             </button>
         </div>
         <div class="tolgoi-baruun">
-            <button class="icon-button" aria-label="Видео үүсгэх">
+            <button class="icon-button" aria-label="Create video">
                 <img src="your-videos.png" alt="">
             </button>
-            <button class="icon-button medegdel-button" aria-label="Мэдэгдлүүд">
+            <button class="icon-button medegdel-button" aria-label="Notifications">
                 <img src="notif.png" alt="">
             </button>
-            <button class="hereglegch-button" aria-label="Хэрэглэгчийн цэс">E</button>
+            <button class="hereglegch-button" aria-label="Account menu">E</button>
         </div>
     </header>
 
     <div class="gol-aguulga">
-        <aside class="hajuu-sambar" role="navigation" aria-label="Хажуугийн навигаци">
-            <nav class="path-heseg">
+        <aside class="hajuu-sambar" aria-label="Main navigation">
+            <nav class="path-heseg" aria-label="Primary navigation">
                 <a href="/" class="path-element">
                     <img src="home.png" alt="">
-                    <span>Home</span>
+                    Home
                 </a>
                 <a href="/shorts" class="path-element">
                     <img src="shorts.png" alt="">
-                    <span>Shorts</span>
+                    Shorts
                 </a>
             </nav>
             <hr class="zuraas">
-            <nav class="path-heseg">
+            <nav class="path-heseg" aria-label="Personal library">
                 <h2 class="heseg-garchig">You</h2>
                 <a href="/history" class="path-element">
                     <img src="history.png" alt="">
-                    <span>History</span>
+                    History
                 </a>
                 <a href="/playlists" class="path-element">
                     <img src="playlist.png" alt="">
-                    <span>Playlists</span>
+                    Playlists
                 </a>
                 <a href="/watch-later" class="path-element">
                     <img src="watch-later.png" alt="">
-                    <span>Watch later</span>
+                    Watch later
                 </a>
                 <a href="/liked" class="path-element">
                     <img src="like.png" alt="">
-                    <span>Liked videos</span>
+                    Liked videos
                 </a>
                 <a href="/your-videos" class="path-element">
                     <img src="your-videos.png" alt="">
-                    <span>Your videos</span>
+                    Your videos
                 </a>
             </nav>
             <hr class="zuraas">
-            <nav class="path-heseg">
+            <nav class="path-heseg" aria-label="Explore">
                 <h2 class="heseg-garchig">Explore</h2>
                 <a href="/music" class="path-element">
                     <img src="music.png" alt="">
-                    <span>Music</span>
+                    Music
                 </a>
                 <a href="/live" class="path-element">
                     <img src="live.png" alt="">
-                    <span>Live</span>
+                    Live
                 </a>
                 <a href="/gaming" class="path-element">
                     <img src="games.png" alt="">
-                    <span>Gaming</span>
+                    Gaming
                 </a>
-                <button class="path-element" aria-expanded="false">
+                <a href="/trending" class="path-element">
                     <img src="see-more.png" alt="">
-                    <span>Show more</span>
-                </button>
+                    Show more
+                </a>
             </nav>
             <hr class="zuraas">
-            <nav class="path-heseg">
+            <nav class="path-heseg" aria-label="More from YouTube">
                 <h2 class="heseg-garchig">More from YouTube</h2>
-                <a href="https://studio.youtube.com" class="path-element">
+                <a href="/studio" class="path-element">
                     <img src="studio.png" alt="">
-                    <span>YouTube Studio</span>
+                    YouTube Studio
                 </a>
-                <a href="https://www.youtubekids.com" class="path-element">
+                <a href="/kids" class="path-element">
                     <img src="kid.png" alt="">
-                    <span>YouTube Kids</span>
+                    YouTube Kids
                 </a>
             </nav>
             <hr class="zuraas">
-            <nav class="path-heseg">
+            <nav class="path-heseg" aria-label="Settings and support">
                 <a href="/settings" class="path-element">
                     <img src="settings.png" alt="">
-                    <span>Settings</span>
+                    Settings
                 </a>
                 <a href="/report" class="path-element">
                     <img src="report.png" alt="">
-                    <span>Report history</span>
+                    Report history
                 </a>
                 <a href="/help" class="path-element">
                     <img src="help.png" alt="">
-                    <span>Help</span>
+                    Help
                 </a>
                 <a href="/feedback" class="path-element">
                     <img src="feedback.png" alt="">
-                    <span>Send feedback</span>
+                    Send feedback
                 </a>
             </nav>
         </aside>
 
-        <main class="aguulga" role="main">
-            <nav class="keyword-aguulga" aria-label="Контент категориуд">
-                <button class="keyword idewkhitei" aria-pressed="true">All</button>
-                <button class="keyword" aria-pressed="false">Music</button>
-                <button class="keyword" aria-pressed="false">Mixes</button>
-                <button class="keyword" aria-pressed="false">Game</button>
-                <button class="keyword" aria-pressed="false">Hwasa</button>
-                <button class="keyword" aria-pressed="false">Kpop</button>
-                <button class="keyword" aria-pressed="false">Playlist</button>
-                <button class="keyword" aria-pressed="false">Podcast</button>
-            </nav>
+        <main class="aguulga">
+            <div class="keyword-aguulga" role="tablist" aria-label="Content filters">
+                <button class="keyword idewkhitei" role="tab" aria-selected="true">All</button>
+                <button class="keyword" role="tab" aria-selected="false">Music</button>
+                <button class="keyword" role="tab" aria-selected="false">Mixes</button>
+                <button class="keyword" role="tab" aria-selected="false">Game</button>
+                <button class="keyword" role="tab" aria-selected="false">Hwasa</button>
+                <button class="keyword" role="tab" aria-selected="false">Kpop</button>
+                <button class="keyword" role="tab" aria-selected="false">Playlist</button>
+                <button class="keyword" role="tab" aria-selected="false">Podcast</button>
+            </div>
 
-            <section class="video-grid" aria-label="Видео жагсаалт">
+            <div class="video-grid">
                 <article class="video-heseg">
-                    <a href="/watch?v=1" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video1.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">3:34</div>
-                        </div>
+                    <a href="/watch?v=1" class="thumbnail">
+                        <img src="video1.png" alt="Lorem ipsum dolor sit amet consectetur" width="100%" height="100%"/>
+                        <div class="hugatsaa">3:34</div>
                     </a>
                     <div class="video-medeelel">
-                        <a href="/channel/lorem" aria-label="Lorem Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
+                        <a href="/channel/lorem">
+                            <img src="account.jpg" alt="Lorem Channel" width="36" height="36"/>
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
                                 <a href="/watch?v=1">Lorem ipsum dolor sit amet consectetur</a>
                             </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/lorem">Lorem Channel</a>
-                            </p>
+                            <p class="suvag-ner"><a href="/channel/lorem">Lorem Channel</a></p>
                             <p class="video-meta">1.2M views • 2 days ago</p>
                         </div>
                     </div>
                 </article>
 
                 <article class="video-heseg">
-                    <a href="/watch?v=2" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video2.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">8:45</div>
-                        </div>
+                    <a href="/watch?v=2" class="thumbnail">
+                        <img src="video2.png" alt="Adipiscing elit sed do eiusmod tempor" width="100%" height="100%"/>
+                        <div class="hugatsaa">8:45</div>
                     </a>
                     <div class="video-medeelel">
-                        <a href="/channel/ipsum" aria-label="Ipsum Studio руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
+                        <a href="/channel/ipsum">
+                            <img src="account.jpg" alt="Ipsum Studio" width="36" height="36"/>
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
                                 <a href="/watch?v=2">Adipiscing elit sed do eiusmod tempor</a>
                             </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/ipsum">Ipsum Studio</a>
-                            </p>
+                            <p class="suvag-ner"><a href="/channel/ipsum">Ipsum Studio</a></p>
                             <p class="video-meta">856K views • 1 week ago</p>
                         </div>
                     </div>
                 </article>
 
                 <article class="video-heseg">
-                    <a href="/watch?v=3" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video3.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">15:22</div>
-                        </div>
+                    <a href="/watch?v=3" class="thumbnail">
+                        <img src="video3.png" alt="Incididunt ut labore et dolore magna" width="100%" height="100%"/>
+                        <div class="hugatsaa">15:22</div>
                     </a>
                     <div class="video-medeelel">
-                        <a href="/channel/dolor" aria-label="Dolor Media руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
+                        <a href="/channel/dolor">
+                            <img src="account.jpg" alt="Dolor Media" width="36" height="36"/>
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
                                 <a href="/watch?v=3">Incididunt ut labore et dolore magna</a>
                             </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/dolor">Dolor Media</a>
-                            </p>
+                            <p class="suvag-ner"><a href="/channel/dolor">Dolor Media</a></p>
                             <p class="video-meta">2.4M views • 3 days ago</p>
                         </div>
                     </div>
                 </article>
 
                 <article class="video-heseg">
-                    <a href="/watch?v=4" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video4.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">20:11</div>
-                        </div>
+                    <a href="/watch?v=4" class="thumbnail">
+                        <img src="video4.png" alt="Ut enim ad minim veniam quis nostrud" width="100%" height="100%"/>
+                        <div class="hugatsaa">20:11</div>
                     </a>
                     <div class="video-medeelel">
-                        <a href="/channel/sit" aria-label="Sit Amet Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
+                        <a href="/channel/sitamet">
+                            <img src="account.jpg" alt="Sit Amet Channel" width="36" height="36"/>
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
                                 <a href="/watch?v=4">Ut enim ad minim veniam quis nostrud</a>
                             </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/sit">Sit Amet Channel</a>
-                            </p>
+                            <p class="suvag-ner"><a href="/channel/sitamet">Sit Amet Channel</a></p>
                             <p class="video-meta">543K views • 5 days ago</p>
                         </div>
                     </div>
                 </article>
 
                 <article class="video-heseg">
-                    <a href="/watch?v=5" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video5.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">9:33</div>
-                        </div>
+                    <a href="/watch?v=5" class="thumbnail">
+                        <img src="video5.png" alt="Exercitation ullamco laboris nisi ut" width="100%" height="100%"/>
+                        <div class="hugatsaa">9:33</div>
                     </a>
-                    <div class="video-medeelel"> 
-                        <a href="/channel/consectetur" aria-label="Consectetur Pro руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
+                    <div class="video-medeelel">
+                        <a href="/channel/consectetur">
+                            <img src="account.jpg" alt="Consectetur Pro" width="36" height="36"/>
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
                                 <a href="/watch?v=5">Exercitation ullamco laboris nisi ut</a>
                             </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/consectetur">Consectetur Pro</a>
-                            </p>
+                            <p class="suvag-ner"><a href="/channel/consectetur">Consectetur Pro</a></p>
                             <p class="video-meta">3.1M views • 1 day ago</p>
                         </div>
                     </div>
                 </article>
 
                 <article class="video-heseg">
-                    <a href="/watch?v=6" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video6.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">11:47</div>
-                        </div>
+                    <a href="/watch?v=6" class="thumbnail">
+                        <img src="video6.png" alt="Aliquip ex ea commodo consequat duis" width="100%" height="100%"/>
+                        <div class="hugatsaa">11:47</div>
                     </a>
                     <div class="video-medeelel">
-                        <a href="/channel/elit" aria-label="Elit Network руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
+                        <a href="/channel/elit">
+                            <img src="account.jpg" alt="Elit Network" width="36" height="36"/>
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
                                 <a href="/watch?v=6">Aliquip ex ea commodo consequat duis</a>
                             </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/elit">Elit Network</a>
-                            </p>
+                            <p class="suvag-ner"><a href="/channel/elit">Elit Network</a></p>
                             <p class="video-meta">678K views • 4 days ago</p>
                         </div>
                     </div>
                 </article>
 
                 <article class="video-heseg">
-                    <a href="/watch?v=7" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video7.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">7:28</div>
-                        </div>
+                    <a href="/watch?v=7" class="thumbnail">
+                        <img src="video7.png" alt="Aute irure dolor in reprehenderit in" width="100%" height="100%"/>
+                        <div class="hugatsaa">7:28</div>
                     </a>
                     <div class="video-medeelel">
-                        <a href="/channel/sed" aria-label="Sed Productions руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
+                        <a href="/channel/sed">
+                            <img src="account.jpg" alt="Sed Productions" width="36" height="36"/>
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
                                 <a href="/watch?v=7">Aute irure dolor in reprehenderit in</a>
                             </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/sed">Sed Productions</a>
-                            </p>
+                            <p class="suvag-ner"><a href="/channel/sed">Sed Productions</a></p>
                             <p class="video-meta">1.8M views • 6 days ago</p>
                         </div>
                     </div>
                 </article>
 
                 <article class="video-heseg">
-                    <a href="/watch?v=8" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video8.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">13:56</div>
-                        </div>
+                    <a href="/watch?v=8" class="thumbnail">
+                        <img src="video8.png" alt="Voluptate velit esse cillum dolore eu" width="100%" height="100%"/>
+                        <div class="hugatsaa">13:56</div>
                     </a>
                     <div class="video-medeelel">
-                        <a href="/channel/do" aria-label="Do Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
+                        <a href="/channel/do">
+                            <img src="account.jpg" alt="Do Channel" width="36" height="36"/>
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
                                 <a href="/watch?v=8">Voluptate velit esse cillum dolore eu</a>
                             </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/do">Do Channel</a>
-                            </p>
+                            <p class="suvag-ner"><a href="/channel/do">Do Channel</a></p>
                             <p class="video-meta">921K views • 2 weeks ago</p>
                         </div>
                     </div>
                 </article>
-
-                <article class="video-heseg">
-                    <a href="/watch?v=9" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video8.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">13:56</div>
-                        </div>
-                    </a>
-                    <div class="video-medeelel">
-                        <a href="/channel/do" aria-label="Do Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
-                        </a>
-                        <div class="video-delgerengui">
-                            <h3 class="video-garchig">
-                                <a href="/watch?v=9">Voluptate velit esse cillum dolore eu</a>
-                            </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/do">Do Channel</a>
-                            </p>
-                            <p class="video-meta">921K views • 2 weeks ago</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="video-heseg">
-                    <a href="/watch?v=10" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video8.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">13:56</div>
-                        </div>
-                    </a>
-                    <div class="video-medeelel">
-                        <a href="/channel/do" aria-label="Do Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
-                        </a>
-                        <div class="video-delgerengui">
-                            <h3 class="video-garchig">
-                                <a href="/watch?v=10">Voluptate velit esse cillum dolore eu</a>
-                            </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/do">Do Channel</a>
-                            </p>
-                            <p class="video-meta">921K views • 2 weeks ago</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="video-heseg">
-                    <a href="/watch?v=11" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video8.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">13:56</div>
-                        </div>
-                    </a>
-                    <div class="video-medeelel">
-                        <a href="/channel/do" aria-label="Do Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
-                        </a>
-                        <div class="video-delgerengui">
-                            <h3 class="video-garchig">
-                                <a href="/watch?v=11">Voluptate velit esse cillum dolore eu</a>
-                            </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/do">Do Channel</a>
-                            </p>
-                            <p class="video-meta">921K views • 2 weeks ago</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="video-heseg">
-                    <a href="/watch?v=12" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video8.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">13:56</div>
-                        </div>
-                    </a>
-                    <div class="video-medeelel">
-                        <a href="/channel/do" aria-label="Do Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
-                        </a>
-                        <div class="video-delgerengui">
-                            <h3 class="video-garchig">
-                                <a href="/watch?v=12">Voluptate velit esse cillum dolore eu</a>
-                            </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/do">Do Channel</a>
-                            </p>
-                            <p class="video-meta">921K views • 2 weeks ago</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="video-heseg">
-                    <a href="/watch?v=13" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video8.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">13:56</div>
-                        </div>
-                    </a>
-                    <div class="video-medeelel">
-                        <a href="/channel/do" aria-label="Do Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
-                        </a>
-                        <div class="video-delgerengui">
-                            <h3 class="video-garchig">
-                                <a href="/watch?v=13">Voluptate velit esse cillum dolore eu</a>
-                            </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/do">Do Channel</a>
-                            </p>
-                            <p class="video-meta">921K views • 2 weeks ago</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="video-heseg">
-                    <a href="/watch?v=14" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video8.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">13:56</div>
-                        </div>
-                    </a>
-                    <div class="video-medeelel">
-                        <a href="/channel/do" aria-label="Do Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
-                        </a>
-                        <div class="video-delgerengui">
-                            <h3 class="video-garchig">
-                                <a href="/watch?v=14">Voluptate velit esse cillum dolore eu</a>
-                            </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/do">Do Channel</a>
-                            </p>
-                            <p class="video-meta">921K views • 2 weeks ago</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="video-heseg">
-                    <a href="/watch?v=15" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video8.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">13:56</div>
-                        </div>
-                    </a>
-                    <div class="video-medeelel">
-                        <a href="/channel/do" aria-label="Do Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
-                        </a>
-                        <div class="video-delgerengui">
-                            <h3 class="video-garchig">
-                                <a href="/watch?v=15">Voluptate velit esse cillum dolore eu</a>
-                            </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/do">Do Channel</a>
-                            </p>
-                            <p class="video-meta">921K views • 2 weeks ago</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="video-heseg">
-                    <a href="/watch?v=16" class="thumbnail-holboos">
-                        <div class="thumbnail">
-                            <img src="video8.png" alt="" width="100%" height="100%"/>
-                            <div class="hugatsaa">13:56</div>
-                        </div>
-                    </a>
-                    <div class="video-medeelel">
-                        <a href="/channel/do" aria-label="Do Channel руу очих">
-                            <img src="account.jpg" alt="" width="36" height="36" class="channel-avatar"/>
-                        </a>
-                        <div class="video-delgerengui">
-                            <h3 class="video-garchig">
-                                <a href="/watch?v=16">Voluptate velit esse cillum dolore eu</a>
-                            </h3>
-                            <p class="suvag-ner">
-                                <a href="/channel/do">Do Channel</a>
-                            </p>
-                            <p class="video-meta">921K views • 2 weeks ago</p>
-                        </div>
-                    </div>
-                </article>
-            </section>
+            </div>
         </main>
     </div>
 </body>

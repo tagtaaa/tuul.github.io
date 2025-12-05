@@ -10,14 +10,17 @@ body {
     color: #f1f1f1;
 }
 
-/* H1 нуух (SEO-д зориулсан) */
-.delgets-garchig {
+/* Visually hidden but accessible to screen readers */
+.visually-hidden {
     position: absolute;
-    left: -10000px;
-    top: auto;
     width: 1px;
     height: 1px;
+    padding: 0;
+    margin: -1px;
     overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 .tolgoi {
@@ -262,14 +265,6 @@ body {
     transition: background-color 0.2s;
     border-radius: 10px;
     margin: 0 8px;
-    border: none;
-    background: none;
-    width: calc(100% - 16px);
-    text-align: left;
-}
-
-.path-element span {
-    display: inline-block;
 }
 
 .path-element img {
@@ -344,12 +339,7 @@ body {
 }
 
 .video-heseg {
-    display: block;
-}
-
-.thumbnail-holboos {
-    display: block;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 .thumbnail {
@@ -358,13 +348,12 @@ body {
     background: black;
     position: relative;
     margin-bottom: 12px;
-    overflow: hidden;
+    display: block;
+    text-decoration: none;
 }
 
 .thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 12px;
 }
 
 .hugatsaa {
@@ -384,15 +373,13 @@ body {
     gap: 12px;
 }
 
-.video-medeelel > a {
-    flex-shrink: 0;
+.video-medeelel a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.channel-avatar {
-    width: 36px;
-    height: 36px;
+.video-medeelel > a img {
     border-radius: 50%;
-    object-fit: cover;
 }
 
 .video-delgerengui {
