@@ -4,23 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Watch, share and discover millions of videos on YouTube. Browse trending content, music videos, gaming streams, and your favorite channels.">
-    <title>YouTube - Watch Videos, Music, and Live Streams</title>
-    <link rel="icon" type="image/png" href="you-logo.png">
-    <link rel="stylesheet" href="styles.css">
-
+    <meta name="keywords" content="youtube, videos, music, live streams, gaming, entertainment, watch videos">
+    <meta name="author" content="Your Name">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tagtaaa.github.io/tuul.github.io/lab6/index.html">
+    <meta property="og:url" content="https://your-domain.com/">
     <meta property="og:title" content="YouTube - Watch Videos, Music, and Live Streams">
     <meta property="og:description" content="Watch, share and discover millions of videos on YouTube. Browse trending content, music videos, gaming streams, and your favorite channels.">
-    <meta property="og:image" content="https://tagtaaa.github.io/tuul.github.io/lab6/you-logo.png">
+    <meta property="og:image" content="https://your-domain.com/you-logo.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tagtaaa.github.io/tuul.github.io/lab6/index.html">
+    <meta property="twitter:url" content="https://your-domain.com/">
     <meta property="twitter:title" content="YouTube - Watch Videos, Music, and Live Streams">
     <meta property="twitter:description" content="Watch, share and discover millions of videos on YouTube. Browse trending content, music videos, gaming streams, and your favorite channels.">
-    <meta property="twitter:image" content="https://tagtaaa.github.io/tuul.github.io/lab6/you-logo.png">
+    <meta property="twitter:image" content="https://your-domain.com/you-logo.png">
+    
+    <title>YouTube - Watch Videos, Music, and Live Streams</title>
+    <link rel="icon" type="image/png" href="you-logo.png">
+    <link rel="canonical" href="https://yourusername.github.io/your-repo-name/">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "YouTube Clone",
+      "url": "https://yourusername.github.io/your-repo-name/",
+      "description": "Watch, share and discover millions of videos on YouTube. Browse trending content, music videos, gaming streams, and your favorite channels.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourusername.github.io/your-repo-name/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "YouTube Clone",
+      "url": "https://yourusername.github.io/your-repo-name/",
+      "logo": "https://yourusername.github.io/your-repo-name/you-logo.png",
+      "sameAs": [
+        "https://github.com/yourusername",
+        "https://twitter.com/yourusername"
+      ]
+    }
+    </script>
+
 </head>
 <body>
     <h1 class="visually-hidden">YouTube - Video Sharing Platform</h1>
@@ -159,10 +194,13 @@
             </div>
 
             <div class="video-grid">
-                <article class="video-heseg">
+                <article class="video-heseg" itemscope itemtype="https://schema.org/VideoObject">
                     <a href="/watch?v=1" class="thumbnail">
-                        <img src="video1.png" alt="Lorem ipsum dolor sit amet consectetur"/>
-                        <div class="hugatsaa">3:34</div>
+                        <img src="video1.png" alt="Lorem ipsum dolor sit amet consectetur" itemprop="thumbnailUrl"/>
+                        <div class="hugatsaa">
+                            <meta itemprop="duration" content="PT3M34S">
+                            3:34
+                        </div>
                     </a>
                     <div class="video-medeelel">
                         <a href="/channel/lorem">
@@ -170,18 +208,29 @@
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
-                                <a href="/watch?v=1">Lorem ipsum dolor sit amet consectetur</a>
+                                <a href="/watch?v=1" itemprop="name">Lorem ipsum dolor sit amet consectetur</a>
                             </h3>
-                            <p class="suvag-ner"><a href="/channel/lorem">Lorem Channel</a></p>
-                            <p class="video-meta">1.2M views • 2 days ago</p>
+                            <p class="suvag-ner">
+                                <a href="/channel/lorem" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Lorem Channel</span>
+                                </a>
+                            </p>
+                            <p class="video-meta">
+                                <meta itemprop="interactionCount" content="1200000">
+                                <meta itemprop="uploadDate" content="2024-12-03">
+                                1.2M views • 2 days ago
+                            </p>
                         </div>
                     </div>
                 </article>
 
-                <article class="video-heseg">
+                <article class="video-heseg" itemscope itemtype="https://schema.org/VideoObject">
                     <a href="/watch?v=2" class="thumbnail">
-                        <img src="video2.png" alt="Adipiscing elit sed do eiusmod tempor"/>
-                        <div class="hugatsaa">8:45</div>
+                        <img src="video2.png" alt="Adipiscing elit sed do eiusmod tempor" itemprop="thumbnailUrl"/>
+                        <div class="hugatsaa">
+                            <meta itemprop="duration" content="PT8M45S">
+                            8:45
+                        </div>
                     </a>
                     <div class="video-medeelel">
                         <a href="/channel/ipsum">
@@ -189,18 +238,29 @@
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
-                                <a href="/watch?v=2">Adipiscing elit sed do eiusmod tempor</a>
+                                <a href="/watch?v=2" itemprop="name">Adipiscing elit sed do eiusmod tempor</a>
                             </h3>
-                            <p class="suvag-ner"><a href="/channel/ipsum">Ipsum Studio</a></p>
-                            <p class="video-meta">856K views • 1 week ago</p>
+                            <p class="suvag-ner">
+                                <a href="/channel/ipsum" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Ipsum Studio</span>
+                                </a>
+                            </p>
+                            <p class="video-meta">
+                                <meta itemprop="interactionCount" content="856000">
+                                <meta itemprop="uploadDate" content="2024-11-28">
+                                856K views • 1 week ago
+                            </p>
                         </div>
                     </div>
                 </article>
 
-                <article class="video-heseg">
+                <article class="video-heseg" itemscope itemtype="https://schema.org/VideoObject">
                     <a href="/watch?v=3" class="thumbnail">
-                        <img src="video3.png" alt="Incididunt ut labore et dolore magna"/>
-                        <div class="hugatsaa">15:22</div>
+                        <img src="video3.png" alt="Incididunt ut labore et dolore magna" itemprop="thumbnailUrl"/>
+                        <div class="hugatsaa">
+                            <meta itemprop="duration" content="PT15M22S">
+                            15:22
+                        </div>
                     </a>
                     <div class="video-medeelel">
                         <a href="/channel/dolor">
@@ -208,18 +268,29 @@
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
-                                <a href="/watch?v=3">Incididunt ut labore et dolore magna</a>
+                                <a href="/watch?v=3" itemprop="name">Incididunt ut labore et dolore magna</a>
                             </h3>
-                            <p class="suvag-ner"><a href="/channel/dolor">Dolor Media</a></p>
-                            <p class="video-meta">2.4M views • 3 days ago</p>
+                            <p class="suvag-ner">
+                                <a href="/channel/dolor" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Dolor Media</span>
+                                </a>
+                            </p>
+                            <p class="video-meta">
+                                <meta itemprop="interactionCount" content="2400000">
+                                <meta itemprop="uploadDate" content="2024-12-02">
+                                2.4M views • 3 days ago
+                            </p>
                         </div>
                     </div>
                 </article>
 
-                <article class="video-heseg">
+                <article class="video-heseg" itemscope itemtype="https://schema.org/VideoObject">
                     <a href="/watch?v=4" class="thumbnail">
-                        <img src="video4.png" alt="Ut enim ad minim veniam quis nostrud"/>
-                        <div class="hugatsaa">20:11</div>
+                        <img src="video4.png" alt="Ut enim ad minim veniam quis nostrud" itemprop="thumbnailUrl"/>
+                        <div class="hugatsaa">
+                            <meta itemprop="duration" content="PT20M11S">
+                            20:11
+                        </div>
                     </a>
                     <div class="video-medeelel">
                         <a href="/channel/sitamet">
@@ -227,18 +298,29 @@
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
-                                <a href="/watch?v=4">Ut enim ad minim veniam quis nostrud</a>
+                                <a href="/watch?v=4" itemprop="name">Ut enim ad minim veniam quis nostrud</a>
                             </h3>
-                            <p class="suvag-ner"><a href="/channel/sitamet">Sit Amet Channel</a></p>
-                            <p class="video-meta">543K views • 5 days ago</p>
+                            <p class="suvag-ner">
+                                <a href="/channel/sitamet" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Sit Amet Channel</span>
+                                </a>
+                            </p>
+                            <p class="video-meta">
+                                <meta itemprop="interactionCount" content="543000">
+                                <meta itemprop="uploadDate" content="2024-11-30">
+                                543K views • 5 days ago
+                            </p>
                         </div>
                     </div>
                 </article>
 
-                <article class="video-heseg">
+                <article class="video-heseg" itemscope itemtype="https://schema.org/VideoObject">
                     <a href="/watch?v=5" class="thumbnail">
-                        <img src="video5.png" alt="Exercitation ullamco laboris nisi ut"/>
-                        <div class="hugatsaa">9:33</div>
+                        <img src="video5.png" alt="Exercitation ullamco laboris nisi ut" itemprop="thumbnailUrl"/>
+                        <div class="hugatsaa">
+                            <meta itemprop="duration" content="PT9M33S">
+                            9:33
+                        </div>
                     </a>
                     <div class="video-medeelel">
                         <a href="/channel/consectetur">
@@ -246,18 +328,29 @@
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
-                                <a href="/watch?v=5">Exercitation ullamco laboris nisi ut</a>
+                                <a href="/watch?v=5" itemprop="name">Exercitation ullamco laboris nisi ut</a>
                             </h3>
-                            <p class="suvag-ner"><a href="/channel/consectetur">Consectetur Pro</a></p>
-                            <p class="video-meta">3.1M views • 1 day ago</p>
+                            <p class="suvag-ner">
+                                <a href="/channel/consectetur" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Consectetur Pro</span>
+                                </a>
+                            </p>
+                            <p class="video-meta">
+                                <meta itemprop="interactionCount" content="3100000">
+                                <meta itemprop="uploadDate" content="2024-12-04">
+                                3.1M views • 1 day ago
+                            </p>
                         </div>
                     </div>
                 </article>
 
-                <article class="video-heseg">
+                <article class="video-heseg" itemscope itemtype="https://schema.org/VideoObject">
                     <a href="/watch?v=6" class="thumbnail">
-                        <img src="video6.png" alt="Aliquip ex ea commodo consequat duis"/>
-                        <div class="hugatsaa">11:47</div>
+                        <img src="video6.png" alt="Aliquip ex ea commodo consequat duis" itemprop="thumbnailUrl"/>
+                        <div class="hugatsaa">
+                            <meta itemprop="duration" content="PT11M47S">
+                            11:47
+                        </div>
                     </a>
                     <div class="video-medeelel">
                         <a href="/channel/elit">
@@ -265,18 +358,29 @@
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
-                                <a href="/watch?v=6">Aliquip ex ea commodo consequat duis</a>
+                                <a href="/watch?v=6" itemprop="name">Aliquip ex ea commodo consequat duis</a>
                             </h3>
-                            <p class="suvag-ner"><a href="/channel/elit">Elit Network</a></p>
-                            <p class="video-meta">678K views • 4 days ago</p>
+                            <p class="suvag-ner">
+                                <a href="/channel/elit" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Elit Network</span>
+                                </a>
+                            </p>
+                            <p class="video-meta">
+                                <meta itemprop="interactionCount" content="678000">
+                                <meta itemprop="uploadDate" content="2024-12-01">
+                                678K views • 4 days ago
+                            </p>
                         </div>
                     </div>
                 </article>
 
-                <article class="video-heseg">
+                <article class="video-heseg" itemscope itemtype="https://schema.org/VideoObject">
                     <a href="/watch?v=7" class="thumbnail">
-                        <img src="video7.png" alt="Aute irure dolor in reprehenderit in"/>
-                        <div class="hugatsaa">7:28</div>
+                        <img src="video7.png" alt="Aute irure dolor in reprehenderit in" itemprop="thumbnailUrl"/>
+                        <div class="hugatsaa">
+                            <meta itemprop="duration" content="PT7M28S">
+                            7:28
+                        </div>
                     </a>
                     <div class="video-medeelel">
                         <a href="/channel/sed">
@@ -284,18 +388,29 @@
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
-                                <a href="/watch?v=7">Aute irure dolor in reprehenderit in</a>
+                                <a href="/watch?v=7" itemprop="name">Aute irure dolor in reprehenderit in</a>
                             </h3>
-                            <p class="suvag-ner"><a href="/channel/sed">Sed Productions</a></p>
-                            <p class="video-meta">1.8M views • 6 days ago</p>
+                            <p class="suvag-ner">
+                                <a href="/channel/sed" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Sed Productions</span>
+                                </a>
+                            </p>
+                            <p class="video-meta">
+                                <meta itemprop="interactionCount" content="1800000">
+                                <meta itemprop="uploadDate" content="2024-11-29">
+                                1.8M views • 6 days ago
+                            </p>
                         </div>
                     </div>
                 </article>
 
-                <article class="video-heseg">
+                <article class="video-heseg" itemscope itemtype="https://schema.org/VideoObject">
                     <a href="/watch?v=8" class="thumbnail">
-                        <img src="video8.png" alt="Voluptate velit esse cillum dolore eu"/>
-                        <div class="hugatsaa">13:56</div>
+                        <img src="video8.png" alt="Voluptate velit esse cillum dolore eu" itemprop="thumbnailUrl"/>
+                        <div class="hugatsaa">
+                            <meta itemprop="duration" content="PT13M56S">
+                            13:56
+                        </div>
                     </a>
                     <div class="video-medeelel">
                         <a href="/channel/do">
@@ -303,10 +418,18 @@
                         </a>
                         <div class="video-delgerengui">
                             <h3 class="video-garchig">
-                                <a href="/watch?v=8">Voluptate velit esse cillum dolore eu</a>
+                                <a href="/watch?v=8" itemprop="name">Voluptate velit esse cillum dolore eu</a>
                             </h3>
-                            <p class="suvag-ner"><a href="/channel/do">Do Channel</a></p>
-                            <p class="video-meta">921K views • 2 weeks ago</p>
+                            <p class="suvag-ner">
+                                <a href="/channel/do" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Do Channel</span>
+                                </a>
+                            </p>
+                            <p class="video-meta">
+                                <meta itemprop="interactionCount" content="921000">
+                                <meta itemprop="uploadDate" content="2024-11-21">
+                                921K views • 2 weeks ago
+                            </p>
                         </div>
                     </div>
                 </article>
