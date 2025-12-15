@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyTravel тантай хамт</title>
+
+  <!-- Connect CSS -->
+  <link rel="stylesheet" href="My Final.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo-area">
+      <img src="logo.png" alt="EasyTravel Logo" class="logo-img">
+      <span class="logo-text">Easy Travel таны аялалын үнэнч хамтрагч</span>
+    </div>
+
+    <div class="cart" onclick="toggleCart()">
+      🛒 Cart
+      <div class="cart-count" id="cartCount">0</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Fuji.jpg" />
+      <h3>Фужи уул</h3>
+      <div class="price">$120</div>
+      <button class="btn" onclick="addToCart('Фужи уул',120)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Himeji Castle.jpg" />
+      <h3>Химэжи цайз</h3>
+      <div class="price">$80</div>
+      <button class="btn" onclick="addToCart('Химэжи цайз',80)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Miyagawa-Cho Street.jpg" />
+      <h3>Мияагава-Чо гудамж</h3>
+      <div class="price">$150</div>
+      <button class="btn" onclick="addToCart('Мияагава-Чо гудамж',150)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Todaiji Temple.jpg" />
+      <h3>Тодайжи сүм</h3>
+      <div class="price">$60</div>
+      <button class="btn" onclick="addToCart('Тодайжи сүм',60)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Osaka.jpg" />
+      <h3>Осака</h3>
+      <div class="price">$80</div>
+      <button class="btn" onclick="addToCart('Осака',80)">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="modal" id="cartModal">
+    <div class="modal-content">
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <button class="btn close" onclick="toggleCart()">Close</button>
+    </div>
+  </div>
+
+  <!-- Connect JavaScript -->
+  <script src="My Final.js"></script>
+</body>
+</html>
