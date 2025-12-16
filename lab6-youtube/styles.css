@@ -9,9 +9,7 @@ body {
     background-color: #0f0f0f;
     color: #f1f1f1;
 }
-
-/* Visually hidden but accessible to screen readers */
-.visually-hidden {
+.hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -86,6 +84,7 @@ body {
     font-weight: 500;
     color: #fff;
     letter-spacing: -0.5px;
+    font-weight: bold;
 }
 
 .tolgoi-tov {
