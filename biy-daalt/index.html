@@ -45,15 +45,15 @@
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-      <div class="hero-eyebrow">Дурсамжаар хөглөгдөх ирээдүй</div>
+      <div class="hero-deed-text">Дурсамжаар хөглөгдөх ирээдүй</div>
       <h1 class="hero-title">WANDERLUST</h1>
-      <p class="hero-sub">
+      <p class="hero-dood-text">
         Wanderlust-тэй хамтдаа аялацгаая — жаргалтай дурсамж бүтээлцэх аялалуудыг хамтдаа
       </p>
 
-      <div class="tab-heseg">
-        <button class="tab-tovch active" data-target="#nisleg-heseg" type="button">Нислэг хайх</button>
-        <button class="tab-tovch" data-target="#aylal-heseg" type="button">Аялалууд</button>
+      <div class="hero-tovch-heseg">
+        <button class="hero-tovch active" data-target="#nisleg-heseg" type="button">Нислэг хайх</button>
+        <button class="hero-tovch" data-target="#aylal-heseg" type="button">Аялалууд</button>
       </div>
     </div>
   </section>
@@ -61,31 +61,29 @@
   <section id="nisleg-heseg">
     <div class="nisleg-husnegt">
 
-      <div class="nisleg-box">
-        <button class="box active" type="button" data-mode="oneway">Нэг талдаа</button>
-        <button class="box" type="button" data-mode="olon-hot">Дамжин нислэг</button>
+      <div class="nisleg-songolt">
+        <button class="songolt active" type="button" data-mode="oneway">Нэг талдаа</button>
+        <button class="songolt" type="button" data-mode="olon-hot">Дамжин нислэг</button>
       </div>
-
-      <a class="rewards-link" href="#">Log in to book Classic Rewards</a>
 
       <form class="nisleg-form" id="nislegForm">
 
-        <div class="nislegs-area">
+        <div class="nisleg-area">
 
           <div class="nisleg-row">
             <div class="nisleg-label">Нислэг 1</div>
 
-            <div class="field">
+            <div class="nohoh-heseg">
               <label>Хаанаас</label>
               <input type="text" placeholder="Улаанбаатар" />
             </div>
 
-            <div class="field">
+            <div class="nohoh-heseg">
               <label>Хаашаа</label>
               <input type="text" placeholder="Сөүл" />
             </div>
 
-            <div class="field">
+            <div class="nohoh-heseg">
               <label>Хэзээ</label>
               <input type="text" placeholder="12/17/2025" />
             </div>
@@ -94,17 +92,17 @@
           <div class="nisleg-row olon-hot-only">
             <div class="nisleg-label">Нислэг 2</div>
 
-            <div class="field">
+            <div class="nohoh-heseg">
               <label>Хаанаас</label>
               <input type="text" placeholder="Улаанбаатар" />
             </div>
 
-            <div class="field">
+            <div class="nohoh-heseg">
               <label>Хаашаа</label>
               <input type="text" placeholder="Сөүл" />
             </div>
 
-            <div class="field">
+            <div class="nohoh-heseg">
               <label>Хэзээ</label>
               <input type="text" placeholder="12/17/2025" />
             </div>
@@ -117,63 +115,63 @@
         </div>
 
         <div class="bottom-row">
-          <div class="field pax-field" id="paxField">
+          <div class="nohoh-heseg zorchigch-nohoh-heseg" id="zorchigchnohoh-heseg">
             <label>Зорчигчид</label>
 
-            <button type="button" class="pax-trigger" id="paxTrigger" aria-expanded="false">
-              <span id="paxSummary">1 adult</span>
-              <span class="pax-caret">▾</span>
+            <button type="button" class="zorchigch-trigger" id="zorchigchTrigger" aria-expanded="false">
+              <span id="zorchigchSummary">1 том хүн</span>
+              <span class="zorchigch-caret">▾</span>
             </button>
 
-            <div class="pax-panel" id="paxPanel" aria-hidden="true">
-              <div class="pax-head">
+            <div class="zorchigch-panel" id="zorchigchPanel" aria-hidden="true">
+              <div class="zorchigch-head">
                 <span>Зорчигчид</span>
-                <button type="button" class="pax-close" id="paxClose">✕</button>
+                <button type="button" class="zorchigch-close" id="zorchigchClose">✕</button>
               </div>
 
-              <div class="pax-row">
-                <div class="pax-zuun">
-                  <div class="pax-title">Том хүн</div>
-                  <div class="pax-sub">+12 нас</div>
+              <div class="zorchigch-row">
+                <div class="zorchigch-zuun">
+                  <div class="zorchigch-title">Том хүн</div>
+                  <div class="zorchigch-sub">+12 нас</div>
                 </div>
-                <div class="pax-right">
-                  <button type="button" class="pax-tovch" data-type="adult" data-delta="-1">−</button>
-                  <div class="pax-count" id="adultCount">1</div>
-                  <button type="button" class="pax-tovch" data-type="adult" data-delta="1">+</button>
-                </div>
-              </div>
-
-              <div class="pax-row">
-                <div class="pax-zuun">
-                  <div class="pax-title">Хүүхэд</div>
-                  <div class="pax-sub">2–11 нас</div>
-                </div>
-                <div class="pax-right">
-                  <button type="button" class="pax-tovch" data-type="child" data-delta="-1">−</button>
-                  <div class="pax-count" id="childCount">0</div>
-                  <button type="button" class="pax-tovch" data-type="child" data-delta="1">+</button>
+                <div class="zorchigch-right">
+                  <button type="button" class="zorchigch-tovch" data-type="adult" data-delta="-1">−</button>
+                  <div class="zorchigch-count" id="adultCount">1</div>
+                  <button type="button" class="zorchigch-tovch" data-type="adult" data-delta="1">+</button>
                 </div>
               </div>
 
-              <div class="pax-row">
-                <div class="pax-zuun">
-                  <div class="pax-title">Нярай</div>
-                  <div class="pax-sub">2-оос доош насны</div>
+              <div class="zorchigch-row">
+                <div class="zorchigch-zuun">
+                  <div class="zorchigch-title">Хүүхэд</div>
+                  <div class="zorchigch-sub">2–11 нас</div>
                 </div>
-                <div class="pax-right">
-                  <button type="button" class="pax-tovch" data-type="infant" data-delta="-1">−</button>
-                  <div class="pax-count" id="infantCount">0</div>
-                  <button type="button" class="pax-tovch" data-type="infant" data-delta="1">+</button>
+                <div class="zorchigch-right">
+                  <button type="button" class="zorchigch-tovch" data-type="child" data-delta="-1">−</button>
+                  <div class="zorchigch-count" id="childCount">0</div>
+                  <button type="button" class="zorchigch-tovch" data-type="child" data-delta="1">+</button>
+                </div>
+              </div>
+
+              <div class="zorchigch-row">
+                <div class="zorchigch-zuun">
+                  <div class="zorchigch-title">Нярай</div>
+                  <div class="zorchigch-sub">2-оос доош насны</div>
+                </div>
+                <div class="zorchigch-right">
+                  <button type="button" class="zorchigch-tovch" data-type="nyrai" data-delta="-1">−</button>
+                  <div class="zorchigch-count" id="nyraiCount">0</div>
+                  <button type="button" class="zorchigch-tovch" data-type="nyrai" data-delta="1">+</button>
                 </div>
               </div>
             </div>
 
             <input type="hidden" name="adult" id="adultInput" value="1">
             <input type="hidden" name="child" id="childInput" value="0">
-            <input type="hidden" name="infant" id="infantInput" value="0">
+            <input type="hidden" name="nyrai" id="nyraiInput" value="0">
           </div>
 
-          <div class="field">
+          <div class="nohoh-heseg">
             <label>Ангилал</label>
             <select>
               <option>Economy Class</option>
@@ -290,17 +288,17 @@
       toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
     });
 
-    const heroTabs = document.querySelectorAll(".tab-tovch");
-    heroTabs.forEach(btn => {
+    const heroheros = document.querySelectorAll(".hero-tovch");
+    heroheros.forEach(btn => {
       btn.addEventListener("click", () => {
-        heroTabs.forEach(x => x.classList.remove("active"));
+        heroheros.forEach(x => x.classList.remove("active"));
         btn.classList.add("active");
         const target = document.querySelector(btn.dataset.target);
         if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
 
-    const modeBtns = document.querySelectorAll(".box");
+    const modeBtns = document.querySelectorAll(".songolt");
     const multiOnlyEls = document.querySelectorAll(".olon-hot-only");
 
     function setMode(mode){
@@ -327,56 +325,56 @@
     setMode("oneway"); 
 
     (function () {
-      const trigger = document.getElementById('paxTrigger');
-      const panel   = document.getElementById('paxPanel');
-      const closetovch= document.getElementById('paxClose');
-      const summary = document.getElementById('paxSummary');
+      const trigger = document.getElementById('zorchigchTrigger');
+      const panel   = document.getElementById('zorchigchPanel');
+      const closetovch= document.getElementById('zorchigchClose');
+      const summary = document.getElementById('zorchigchSummary');
 
-      const counts = { adult: 1, child: 0, infant: 0 };
+      const counts = { adult: 1, child: 0, nyrai: 0 };
 
       const elCount = {
         adult: document.getElementById('adultCount'),
         child: document.getElementById('childCount'),
-        infant: document.getElementById('infantCount')
+        nyrai: document.getElementById('nyraiCount')
       };
 
       const elInput = {
         adult: document.getElementById('adultInput'),
         child: document.getElementById('childInput'),
-        infant: document.getElementById('infantInput')
+        nyrai: document.getElementById('nyraiInput')
       };
 
-      function totalPax(){ return counts.adult + counts.child + counts.infant; }
+      function totalzorchigch(){ return counts.adult + counts.child + counts.nyrai; }
 
       function updateSummary(){
         const parts = [];
         if (counts.adult) parts.push(`${counts.adult} adult`);
         if (counts.child) parts.push(`${counts.child} Child`);
-        if (counts.infant) parts.push(`${counts.infant} Infant`);
+        if (counts.nyrai) parts.push(`${counts.nyrai} nyrai`);
         summary.textContent = parts.join(', ') || '0';
       }
 
       function updateUI(){
         elCount.adult.textContent = counts.adult;
         elCount.child.textContent = counts.child;
-        elCount.infant.textContent = counts.infant;
+        elCount.nyrai.textContent = counts.nyrai;
 
         elInput.adult.value = counts.adult;
         elInput.child.value = counts.child;
-        elInput.infant.value = counts.infant;
+        elInput.nyrai.value = counts.nyrai;
 
-        document.querySelectorAll('.pax-tovch[data-type="adult"][data-delta="-1"]').forEach(b=>{
+        document.querySelectorAll('.zorchigch-tovch[data-type="adult"][data-delta="-1"]').forEach(b=>{
           b.disabled = counts.adult <= 1;
         });
-        document.querySelectorAll('.pax-tovch[data-type="child"][data-delta="-1"]').forEach(b=>{
+        document.querySelectorAll('.zorchigch-tovch[data-type="child"][data-delta="-1"]').forEach(b=>{
           b.disabled = counts.child <= 0;
         });
-        document.querySelectorAll('.pax-tovch[data-type="infant"][data-delta="-1"]').forEach(b=>{
-          b.disabled = counts.infant <= 0;
+        document.querySelectorAll('.zorchigch-tovch[data-type="nyrai"][data-delta="-1"]').forEach(b=>{
+          b.disabled = counts.nyrai <= 0;
         });
 
-        document.querySelectorAll('.pax-tovch[data-delta="1"]').forEach(b=>{
-          b.disabled = totalPax() >= 9;
+        document.querySelectorAll('.zorchigch-tovch[data-delta="1"]').forEach(b=>{
+          b.disabled = totalzorchigch() >= 9;
         });
 
         updateSummary();
@@ -399,14 +397,14 @@
       closetovch.addEventListener('click', closePanel);
 
       panel.addEventListener('click', (e) => {
-        const tovch = e.target.closest('.pax-tovch');
+        const tovch = e.target.closest('.zorchigch-tovch');
         if (!tovch) return;
         const type  = tovch.dataset.type;
         const delta = parseInt(tovch.dataset.delta, 10);
 
         if (type === 'adult' && counts.adult + delta < 1) return;
         if (counts[type] + delta < 0) return;
-        if (totalPax() + delta > 9) return;
+        if (totalzorchigch() + delta > 9) return;
 
         counts[type] += delta;
         updateUI();
@@ -430,7 +428,7 @@
       const modal = document.getElementById("cartModal");
       modal.style.display = (modal.style.display === "flex") ? "none" : "flex";
       const box = document.getElementById("cartItems");
-      box.innerHTML = cart.map(i => `<div class="cart-item"><span>${i.name}</span><span>$${i.price}</span></div>`).join("");
+      box.innerHTML = cart.map(i => `<div class="cart-item"><span>${i.name}</span><span>${i.price}</span></div>`).join("");
     }
   </script>
 

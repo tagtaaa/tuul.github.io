@@ -182,7 +182,7 @@ body{
   gap: 10px;
 }
 
-.hero-eyebrow{
+.hero-deed-text{
   font-size: 12px;
   letter-spacing: 3px;
   opacity: 0.9;
@@ -195,21 +195,21 @@ body{
   text-shadow: 0 8px 30px rgba(0,0,0,0.35);
 }
 
-.hero-sub{
+.hero-dood-text{
   max-width: 760px;
   margin: 0 auto;
   font-size: 18px;
   opacity: 0.95;
 }
 
-.tab-heseg{
+.hero-tovch-heseg{
   display: flex;
   gap: 16px;
   justify-content: center;
   margin: 20px 0;
 }
 
-.tab-tovch{
+.hero-tovch{
   padding: 12px 26px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.4);
@@ -221,11 +221,11 @@ body{
   transition: all 0.25s ease;
 }
 
-.tab-tovch:hover{
+.hero-tovch:hover{
   background: rgba(255,255,255,0.25);
 }
 
-.tab-tovch.active{
+.hero-tovch.active{
   background: var(--accent);
   color: #111;
   border-color: var(--accent);
@@ -246,7 +246,7 @@ body{
   box-shadow: var(--shadow);
 }
 
-.nisleg-box{
+.nisleg-songolt{
   display:flex;
   gap:18px;
   border-bottom: 1px solid rgba(0,0,0,0.10);
@@ -254,7 +254,7 @@ body{
   margin-bottom:14px;
 }
 
-.nisleg-box .box{
+.nisleg-songolt .songolt{
   background:none;
   border:none;
   cursor:pointer;
@@ -264,34 +264,27 @@ body{
   font-weight: 700;
 }
 
-.nisleg-box .box.active{
+.nisleg-songolt .songolt.active{
   color:#0b57d0;
   border-bottom: 3px solid #0b57d0;
 }
 
-.rewards-link{
-  display:inline-block;
-  margin: 6px 0 14px;
-  color:#0b57d0;
-  text-decoration: underline;
-}
-
-.field{
+.nohoh-heseg{
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius:10px;
   padding: 12px 12px;
 }
 
-.field label{
+.nohoh-heseg label{
   display:block;
   font-size:12px;
   color: var(--text-muted);
   margin-bottom:6px;
 }
 
-.field input,
-.field select{
+.nohoh-heseg input,
+.nohoh-heseg select{
   width:100%;
   border:none;
   outline:none;
@@ -366,9 +359,9 @@ body{
   cursor:pointer;
 }
 
-.pax-field{ position: relative; }
+.zorchigch-nohoh-heseg{ position: relative; }
 
-.pax-trigger{
+.zorchigch-trigger{
   width:100%;
   height:64px;
   border:1px solid var(--border);
@@ -383,9 +376,9 @@ body{
   color: var(--text-main);
 }
 
-.pax-caret{ opacity:.7; }
+.zorchigch-caret{ opacity:.7; }
 
-.pax-panel{
+.zorchigch-panel{
   position:absolute;
   top: calc(100% + 8px);
   left:0;
@@ -400,9 +393,9 @@ body{
   display:none;
 }
 
-.pax-panel.open{ display:block; }
+.zorchigch-panel.open{ display:block; }
 
-.pax-head{
+.zorchigch-head{
   display:flex;
   align-items:center;
   justify-content: space-between;
@@ -412,7 +405,7 @@ body{
   margin-bottom:8px;
 }
 
-.pax-close{
+.zorchigch-close{
   border:none;
   background:none;
   cursor:pointer;
@@ -420,7 +413,7 @@ body{
   opacity:.7;
 }
 
-.pax-row{
+.zorchigch-row{
   display:flex;
   justify-content: space-between;
   align-items:center;
@@ -428,12 +421,12 @@ body{
   border-bottom:1px solid rgba(0,0,0,0.06);
 }
 
-.pax-zuun .pax-title{ font-weight:800; }
-.pax-zuun .pax-sub{ font-size:12px; color: var(--text-muted); margin-top:3px; }
+.zorchigch-zuun .zorchigch-title{ font-weight:800; }
+.zorchigch-zuun .zorchigch-sub{ font-size:12px; color: var(--text-muted); margin-top:3px; }
 
-.pax-right{ display:flex; align-items:center; gap:14px; }
+.zorchigch-right{ display:flex; align-items:center; gap:14px; }
 
-.pax-tovch{
+.zorchigch-tovch{
   width:44px;
   height:44px;
   border-radius:999px;
@@ -445,9 +438,9 @@ body{
   color: var(--text-main);
 }
 
-.pax-tovch:disabled{ opacity:.35; cursor:not-allowed; }
+.zorchigch-tovch:disabled{ opacity:.35; cursor:not-allowed; }
 
-.pax-count{ width:22px; text-align:center; font-weight:900; }
+.zorchigch-count{ width:22px; text-align:center; font-weight:900; }
 
 #aylal-heseg{
   display:flex;
@@ -618,7 +611,7 @@ body{
     padding: 0 20px;
   }
   .tolgoi-nav{ display:none; }
-
+  .tolgoi-actions{justify-content: end;}
   .hero{ height: 360px; }
   .hero-title{ font-size: 38px; }
   .hero-content{ padding: 32px 16px; }
