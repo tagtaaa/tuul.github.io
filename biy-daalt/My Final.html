@@ -3,71 +3,451 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EasyTravel тантай хамт</title>
-
-  <!-- Connect CSS -->
+  <title>Wanderlust тантай хамт</title>
   <link rel="stylesheet" href="My Final.css">
+  <meta name="description" content="Watch, share and discover millions of videos on YouTube. Browse trending content, music videos, gaming streams, and your favorite channels.">
+  <meta name="keywords" content="youtube, videos, music, live streams, gaming, entertainment, watch videos, movie, vlog">
+  <meta name="author" content="enkhtuul">
+  <link rel="canonical" href="https://tagtaaa.github.io/tuul.github.io/biy-daalt/">
+   
 </head>
 <body>
 
-  <div class="header">
-    <div class="logo-area">
-      <img src="logo.png" alt="EasyTravel Logo" class="logo-img">
-      <span class="logo-text">Easy Travel таны аялалын үнэнч хамтрагч</span>
+  <header class="tolgoi">
+    <div class="tolgoi-zuun">
+      <img src="logo.png" alt="wanderlust logo" class="logo-img">
+      <div class="logo-text-heseg">
+        <span class="logo-title">Wanderlust</span>
+        <span class="logo-text">таны аялалын үнэнч хамтрагч</span>
+      </div>
     </div>
 
-    <div class="cart" onclick="toggleCart()">
-      🛒 Cart
-      <div class="cart-count" id="cartCount">0</div>
-    </div>
-  </div>
+    <nav class="tolgoi-nav">
+      <a href="#home">Эхлэл</a>
+      <a href="#book">Нислэг</a>
+      <a href="#explore">Аялал</a>
+      <a href="#help">Бидний тухай</a>
+    </nav>
 
-  <div class="container">
-    <div class="card">
-      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Fuji.jpg" />
-      <h3>Фужи уул</h3>
-      <div class="price">$120</div>
-      <button class="btn" onclick="addToCart('Фужи уул',120)">Add to Cart</button>
+    <div class="tolgoi-actions">
+      <button class="icon-tovch" aria-label="Search">🔍</button>
+      <button class="icon-tovch cart-tovch">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-tovch theme-tovch" id="themeToggle">🌙</button>
     </div>
+  </header>
 
-    <div class="card">
-      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Himeji Castle.jpg" />
-      <h3>Химэжи цайз</h3>
-      <div class="price">$80</div>
-      <button class="btn" onclick="addToCart('Химэжи цайз',80)">Add to Cart</button>
-    </div>
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
 
-    <div class="card">
-      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Miyagawa-Cho Street.jpg" />
-      <h3>Мияагава-Чо гудамж</h3>
-      <div class="price">$150</div>
-      <button class="btn" onclick="addToCart('Мияагава-Чо гудамж',150)">Add to Cart</button>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Дурсамжаар хөглөгдөх ирээдүй</div>
+      <h1 class="hero-title">WANDERLUST</h1>
+      <p class="hero-sub">
+        Wanderlust-тэй хамтдаа аялацгаая — жаргалтай дурсамж бүтээлцэх аялалуудыг хамтдаа
+      </p>
+      <div class="hero-cta">
+        <a class="hero-tovch" href="#book">Нислэг хайх</a>
+        <a class="hero-tovch ghost" href="#explore">Аялалууд</a>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Todaiji Temple.jpg" />
-      <h3>Тодайжи сүм</h3>
-      <div class="price">$60</div>
-      <button class="btn" onclick="addToCart('Тодайжи сүм',60)">Add to Cart</button>
-    </div>
+  <section class="nisleg-heseg">
+    <div class="nisleg-husnegt">
 
-    <div class="card">
-      <img src="C:\Users\User\Desktop\My Final - ITU - Enkhtuul\Osaka.jpg" />
-      <h3>Осака</h3>
-      <div class="price">$80</div>
-      <button class="btn" onclick="addToCart('Осака',80)">Add to Cart</button>
+      <div class="nisleg-box">
+        <button class="box active" type="button" data-mode="oneway">Нэг талдаа</button>
+        <button class="box" type="button" data-mode="olon-hot">Олон хот</button>
+      </div>
+
+      <a class="rewards-link" href="#">Log in to book Classic Rewards</a>
+
+      <form class="nisleg-form">
+
+        <div class="nislegs-area">
+          <div class="nisleg-row">
+            <div class="nisleg-label">Нислэг 1</div>
+
+            <div class="field">
+              <label>Хаанаас</label>
+              <input type="text" placeholder="Улаанбаатар" />
+            </div>
+
+            <div class="field">
+              <label>Хаашаа</label>
+              <input type="text" placeholder="Сөүл" />
+            </div>
+
+            <div class="field">
+              <label>Хэзээ</label>
+              <input type="text" placeholder="12/17/2025" />
+            </div>
+          </div>
+
+          <div class="nisleg-row olon-hot-only">
+          <div class="nisleg-label">Нислэг 2</div>
+
+          <div class="field">
+            <label>Хаанаас</label>
+            <input type="text" placeholder="Улаанбаатар" />
+          </div>
+
+          <div class="field">
+            <label>Хаашаа</label>
+            <input type="text" placeholder="Сөүл" />
+          </div>
+
+          <div class="field">
+            <label>Хэзээ</label>
+            <input type="text" placeholder="12/17/2025" />
+          </div>
+        </div>
+
+          <button class="add-nisleg olon-hot-only" type="button" id="addnislegtovch">
+            <span class="add-plus">+</span>
+            Нислэг нэмэх
+          </button>
+        </div>
+
+        <div class="bottom-row">
+          <div class="field pax-field" id="paxField">
+            <label>Зорчигчид</label>
+
+            <button type="button" class="pax-trigger" id="paxTrigger" aria-expanded="false">
+              <span id="paxSummary">1 adult</span>
+              <span class="pax-caret">▾</span>
+            </button>
+
+            <div class="pax-panel" id="paxPanel" aria-hidden="true">
+              <div class="pax-head">
+                <span>Зорчигчид</span>
+                <button type="button" class="pax-close" id="paxClose">✕</button>
+              </div>
+
+              <div class="pax-row">
+                <div class="pax-zuun">
+                  <div class="pax-title">Том хүн</div>
+                  <div class="pax-sub">+12 нас</div>
+                </div>
+                <div class="pax-right">
+                  <button type="button" class="pax-tovch" data-type="adult" data-delta="-1">−</button>
+                  <div class="pax-count" id="adultCount">1</div>
+                  <button type="button" class="pax-tovch" data-type="adult" data-delta="1">+</button>
+                </div>
+              </div>
+
+              <div class="pax-row">
+                <div class="pax-zuun">
+                  <div class="pax-title">Хүүхэд</div>
+                  <div class="pax-sub">2–11 нас</div>
+                </div>
+                <div class="pax-right">
+                  <button type="button" class="pax-tovch" data-type="child" data-delta="-1">−</button>
+                  <div class="pax-count" id="childCount">0</div>
+                  <button type="button" class="pax-tovch" data-type="child" data-delta="1">+</button>
+                </div>
+              </div>
+
+              <div class="pax-row">
+                <div class="pax-zuun">
+                  <div class="pax-title">Нярай</div>
+                  <div class="pax-sub">2-оос доош насны</div>
+                </div>
+                <div class="pax-right">
+                  <button type="button" class="pax-tovch" data-type="infant" data-delta="-1">−</button>
+                  <div class="pax-count" id="infantCount">0</div>
+                  <button type="button" class="pax-tovch" data-type="infant" data-delta="1">+</button>
+                </div>
+              </div>
+            </div>
+
+            <input type="hidden" name="adult" id="adultInput" value="1">
+            <input type="hidden" name="child" id="childInput" value="0">
+            <input type="hidden" name="infant" id="infantInput" value="0">
+          </div>
+
+          <div class="field">
+            <label>Ангилал</label>
+            <select>
+              <option>Economy Class</option>
+              <option>Business Class</option>
+              <option>First Class</option>
+            </select>
+          </div>
+
+          <button class="search-tovch" type="button">Нислэг хайх</button>
+        </div>
+      </form>
     </div>
-  </div>
+  </section>
+
+  <section class="cards-heseg">
+    <div class="cards-husnegt">
+      <h2 class="cards-title">Аяллын багцууд</h2>
+
+      <div class="cards-row">
+        <div class="card">
+          <img src="biy-daalt/Fuji.jpg" alt="Япон - Токио">
+          <h3>Япон - Токио</h3>
+          <div class="price">$120</div>
+          <button class="tovch" onclick="addToCart('Япон - Токио',120)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="biy-daalt/Himeji Castle.jpg" alt="Солонгос - Сөүл">
+          <h3>Солонгос - Сөүл</h3>
+          <div class="price">$80</div>
+          <button class="tovch" onclick="addToCart('Солонгос - Сөүл',80)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="biy-daalt/Miyagawa-Cho Street.jpg" alt="Хятад - Бээжин">
+          <h3>Хятад - Бээжин</h3>
+          <div class="price">$150</div>
+          <button class="tovch" onclick="addToCart('Хятад - Бээжин',150)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="biy-daalt/Todaiji Temple.jpg" alt="Вьетнам - Фукок">
+          <h3>Вьетнам - Фукок</h3>
+          <div class="price">$60</div>
+          <button class="tovch" onclick="addToCart('Вьетнам - Фукок',60)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="biy-daalt/austria.jpg" alt="Австри - Вена">
+          <h3>Австри - Вена</h3>
+          <div class="price">$120</div>
+          <button class="tovch" onclick="addToCart('Австри - Вена',120)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="biy-daalt/belgium.jfif" alt="Бельги - Брюссель">
+          <h3>Бельги - Брюссель</h3>
+          <div class="price">$80</div>
+          <button class="tovch" onclick="addToCart('Бельги - Брюссель',80)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="biy-daalt/czech.webp" alt="Чех - Праг">
+          <h3>Чех - Праг</h3>
+          <div class="price">$150</div>
+          <button class="tovch" onclick="addToCart('Чех - Праг',150)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="biy-daalt/denmark.jfif" alt="Дани - Копенхаген">
+          <h3>Дани - Копенхаген</h3>
+          <div class="price">$60</div>
+          <button class="tovch" onclick="addToCart('Дани - Копенхаген',60)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="biy-daalt/germany.webp" alt="Герман - Берлин">
+          <h3>Герман - Берлин</h3>
+          <div class="price">$80</div>
+          <button class="tovch" onclick="addToCart('Герман - Берлин',80)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="modal" id="cartModal">
     <div class="modal-content">
-      <h2>Your Cart</h2>
+      <h2>Таны сагс</h2>
       <div id="cartItems"></div>
-      <button class="btn close" onclick="toggleCart()">Close</button>
+      <button class="tovch close" onclick="toggleCart()">Хаах</button>
     </div>
   </div>
+  <script>
+  const toggle = document.getElementById("themeToggle");
 
-  <!-- Connect JavaScript -->
-  <script src="My Final.js"></script>
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    toggle.textContent =
+      document.body.classList.contains("dark") ? "☀️" : "🌙";
+  });
+  </script>
+
+  <script>
+    const box = document.querySelectorAll(".box");
+    const multiOnlyEls = document.querySelectorAll(".olon-hot-only");
+
+    function setMode(mode){
+      const isMulti = mode === "olon-hot";
+
+      multiOnlyEls.forEach(el => {
+        if (!isMulti) {
+          el.style.display = "none";
+          return;
+        }
+
+        if (el.classList.contains("nisleg-row")) {
+          el.style.display = "grid";
+        } else if (el.classList.contains("add-nisleg")) {
+          el.style.display = "flex";
+        } else {
+          el.style.display = ""; 
+        }
+      });
+    }
+
+    box.forEach(box => {
+      box.addEventListener("click", () => {
+        box.forEach(t => t.classList.remove("active"));
+        box.classList.add("active");
+        setMode(box.dataset.mode);
+      });
+    });
+
+    setMode("return");
+
+
+    (function () {
+      const trigger = document.getElementById('paxTrigger');
+      const panel   = document.getElementById('paxPanel');
+      const closetovch= document.getElementById('paxClose');
+      const summary = document.getElementById('paxSummary');
+
+      const counts = { adult: 1, child: 0, infant: 0 };
+
+      const elCount = {
+        adult: document.getElementById('adultCount'),
+        child: document.getElementById('childCount'),
+        infant: document.getElementById('infantCount')
+      };
+
+      const elInput = {
+        adult: document.getElementById('adultInput'),
+        child: document.getElementById('childInput'),
+        infant: document.getElementById('infantInput')
+      };
+
+      function totalPax(){ return counts.adult + counts.child + counts.infant; }
+
+      function updateSummary(){
+        const parts = [];
+        if (counts.adult) parts.push(`${counts.adult} adult`);
+        if (counts.child) parts.push(`${counts.child} Child`);
+        if (counts.infant) parts.push(`${counts.infant} Infant`);
+        summary.textContent = parts.join(', ') || '0';
+      }
+
+      function updateUI(){
+        elCount.adult.textContent = counts.adult;
+        elCount.child.textContent = counts.child;
+        elCount.infant.textContent = counts.infant;
+
+        elInput.adult.value = counts.adult;
+        elInput.child.value = counts.child;
+        elInput.infant.value = counts.infant;
+
+        document.querySelectorAll('.pax-tovch[data-type="adult"][data-delta="-1"]').forEach(b=>{
+          b.disabled = counts.adult <= 1;
+        });
+        document.querySelectorAll('.pax-tovch[data-type="child"][data-delta="-1"]').forEach(b=>{
+          b.disabled = counts.child <= 0;
+        });
+        document.querySelectorAll('.pax-tovch[data-type="infant"][data-delta="-1"]').forEach(b=>{
+          b.disabled = counts.infant <= 0;
+        });
+
+        document.querySelectorAll('.pax-tovch[data-delta="1"]').forEach(b=>{
+          b.disabled = totalPax() >= 9;
+        });
+
+        updateSummary();
+      }
+
+      function openPanel(){
+        panel.classList.add('open');
+        trigger.setAttribute('aria-expanded','true');
+        panel.setAttribute('aria-hidden','false');
+      }
+      function closePanel(){
+        panel.classList.remove('open');
+        trigger.setAttribute('aria-expanded','false');
+        panel.setAttribute('aria-hidden','true');
+      }
+
+      trigger.addEventListener('click', () => {
+        panel.classList.contains('open') ? closePanel() : openPanel();
+      });
+      closetovch.addEventListener('click', closePanel);
+
+      panel.addEventListener('click', (e) => {
+        const tovch = e.target.closest('.pax-tovch');
+        if (!tovch) return;
+        const type  = tovch.dataset.type;
+        const delta = parseInt(tovch.dataset.delta, 10);
+
+        if (type === 'adult' && counts.adult + delta < 1) return;
+        if (counts[type] + delta < 0) return;
+        if (totalPax() + delta > 9) return;
+
+        counts[type] += delta;
+        updateUI();
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!panel.classList.contains('open')) return;
+        const inside = panel.contains(e.target) || trigger.contains(e.target);
+        if (!inside) closePanel();
+      });
+
+      updateUI();
+    })();
+
+    /* -------- Simple cart (placeholder) -------- */
+    let cart = [];
+    function addToCart(name, price){
+      cart.push({name, price});
+      document.getElementById("cartCount").textContent = cart.length;
+    }
+    function toggleCart(){
+      const modal = document.getElementById("cartModal");
+      modal.style.display = (modal.style.display === "flex") ? "none" : "flex";
+      const box = document.getElementById("cartItems");
+      box.innerHTML = cart.map(i => `<div class="cart-item"><span>${i.name}</span><span>$${i.price}</span></div>`).join("");
+    }
+  </script>
+
 </body>
+
+<footer class="tugsul-heseg">
+  <div class="tugsul-dotor">
+
+    <div class="tugsul-bagana">
+      <h4 class="tugsul-garchig">Бидний тухай</h4>
+      <a href="#">Бидний туршлага</a>
+      <a href="#">Хэрэглэгчтэй харилцах төв</a>
+      <a href="#">Нээлттэй ажлын байр</a>
+      <a href="#">Холбоо барих</a>
+    </div>
+
+    <div class="tugsul-bagana">
+      <h4 class="tugsul-garchig">Тусламж</h4>
+      <a href="#">Асуулт хариулт</a>
+      <a href="#">Аялал бүртгүүлэх заавар</a>
+      <a href="#">Бичиг баримт бүрдүүлэлэх заавар</a>
+    </div>
+
+    <div class="tugsul-bagana">
+      <h4 class="tugsul-garchig">Захилга</h4>
+      <a href="#">Нислэг захиалах</a>
+      <a href="#">Аялалд бүртгүүлэх</a>
+      <a href="#">Аялалын даатгал</a>
+      <a href="#">Угтах тосох үйлчиллгээ</a>
+    </div>
+
+  </div>
+
+  <div class="tugsul-doosh">
+    © 2025 Wanderlust Аялал зуучлалын агентлаг ·
+  </div>
+</footer>
 </html>
