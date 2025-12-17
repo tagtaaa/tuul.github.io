@@ -1,6 +1,3 @@
-/* =========================
-   RESET + THEME VARIABLES
-========================= */
 *{
   margin:0;
   padding:0;
@@ -9,12 +6,12 @@
 }
 
 :root{
-  --bg-page: #ffffff;
+  --bg-page: linear-gradient(90deg, #14e2c4, #10b7e8);
   --bg-card: #ffffff;
   --bg-nisleg: #ffffff;
 
-  --primary: #1F7A63;     /* eco green */
-  --accent:  #FFD869;     /* warm sand */
+  --primary: #1F7A63;     
+  --accent:  #FFD869;     
 
   --text-main:  #0F2F2A;
   --text-muted: #5F7F78;
@@ -44,10 +41,6 @@ body{
   transition: background 0.3s, color 0.3s;
   min-height: 100vh;
 }
-
-/* =========================
-   HEADER (tolgoi)
-========================= */
 .tolgoi{
   height: 72px;
   padding: 0 40px;
@@ -149,7 +142,7 @@ body{
   position:absolute;
   top:-8px;
   right:-8px;
-  background: crimson;
+  background: var(--accent);
   color:#fff;
   font-size: 11px;
   width: 18px;
@@ -161,9 +154,6 @@ body{
   font-weight: 800;
 }
 
-/* =========================
-   HERO
-========================= */
 .hero{
   position: relative;
   height: 520px;
@@ -212,34 +202,36 @@ body{
   opacity: 0.95;
 }
 
-.hero-cta{
-  margin-top: 10px;
-  display:flex;
-  justify-content:center;
-  gap: 12px;
-  flex-wrap: wrap;
+.tab-heseg{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-.hero-tovch{
-  display:inline-block;
-  padding: 12px 18px;
+.tab-tovch{
+  padding: 12px 26px;
   border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab-tovch:hover{
+  background: rgba(255,255,255,0.25);
+}
+
+.tab-tovch.active{
   background: var(--accent);
-  color:#111;
-  font-weight: 800;
-  text-decoration:none;
+  color: #111;
+  border-color: var(--accent);
 }
 
-.hero-tovch.ghost{
-  background: rgba(255,255,255,0.18);
-  color:#fff;
-  border: 1px solid rgba(255,255,255,0.35);
-}
-
-/* =========================
-   FLIGHT SEARCH (nisleg)
-========================= */
-.nisleg-heseg{
+#nisleg-heseg{
   display:flex;
   justify-content:center;
   padding: 22px 40px 10px;
@@ -284,7 +276,6 @@ body{
   text-decoration: underline;
 }
 
-/* shared field */
 .field{
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -309,7 +300,6 @@ body{
   color: var(--text-main);
 }
 
-/* form */
 .nisleg-form{
   display:flex;
   flex-direction: column;
@@ -330,7 +320,6 @@ body{
   margin: 6px 0 4px;
 }
 
-/* Multi-city only хэсгүүдийг JS display тохируулна */
 .olon-hot-only{ display:none; }
 
 .add-nisleg{
@@ -358,7 +347,6 @@ body{
   background: var(--bg-card);
 }
 
-/* bottom row */
 .bottom-row{
   display:grid;
   grid-template-columns: 1fr 1fr 1.1fr;
@@ -378,7 +366,6 @@ body{
   cursor:pointer;
 }
 
-/* Pax dropdown */
 .pax-field{ position: relative; }
 
 .pax-trigger{
@@ -462,10 +449,7 @@ body{
 
 .pax-count{ width:22px; text-align:center; font-weight:900; }
 
-/* =========================
-   CARDS SLIDER
-========================= */
-.cards-heseg{
+#aylal-heseg{
   display:flex;
   justify-content:center;
   padding: 18px 40px 60px;
@@ -482,8 +466,10 @@ body{
 
 .cards-row{
   display:flex;
+  flex-wrap: nowrap; 
   gap: 22px;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 10px 6px 18px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -547,9 +533,6 @@ body{
   opacity:0.95;
 }
 
-/* =========================
-   MODAL
-========================= */
 .modal{
   position:fixed;
   inset:0;
@@ -579,24 +562,21 @@ body{
 .close{
   margin-top: 15px;
   width:100%;
-  background: crimson;
+  background: var(--accent);
   color:#fff;
 }
+
 .tugsul-heseg{
-  background: #2f2f2f;
+  background: #0E2F2F;
   color: #e6e6e6;
   padding: 48px 40px 20px;
-}
-
-body.dark .tugsul-heseg{
-  background: #1c1c1c;
 }
 
 .tugsul-dotor{
   width: min(1100px, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
@@ -624,7 +604,6 @@ body.dark .tugsul-heseg{
   color: var(--accent);
 }
 
-/* bottom copyright */
 .tugsul-doosh{
   margin-top: 40px;
   padding-top: 16px;
@@ -633,6 +612,7 @@ body.dark .tugsul-heseg{
   font-size: 13px;
   color: #aaaaaa;
 }
+
 @media (max-width: 900px){
   .tolgoi{
     padding: 0 20px;
@@ -647,8 +627,9 @@ body.dark .tugsul-heseg{
   .bottom-row{ grid-template-columns: 1fr; }
   .search-tovch{ height: 54px; }
 
-  .cards-heseg{ padding: 18px 20px 60px; }
-  .nisleg-heseg{ padding: 22px 20px 10px; }
+  #aylal-heseg{ padding: 18px 20px 60px; }
+  #nisleg-heseg{ padding: 22px 20px 10px; }
+
   .tugsul-dotor{
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;

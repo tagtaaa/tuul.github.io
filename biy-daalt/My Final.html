@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wanderlust тантай хамт</title>
   <link rel="stylesheet" href="My Final.css">
-  <meta name="description" content="Watch, share and discover millions of videos on YouTube. Browse trending content, music videos, gaming streams, and your favorite channels.">
-  <meta name="keywords" content="youtube, videos, music, live streams, gaming, entertainment, watch videos, movie, vlog">
+  <meta name="description" content="Wanderlust — нислэг хайх, аяллын багц сонгох, аяллаа төлөвлөх үйлчилгээ.">
+  <meta name="keywords" content="travel, flights, tours, wanderlust, booking, mongolia">
   <meta name="author" content="enkhtuul">
   <link rel="canonical" href="https://tagtaaa.github.io/tuul.github.io/biy-daalt/">
-   
 </head>
+
 <body>
 
   <header class="tolgoi">
@@ -24,18 +24,20 @@
 
     <nav class="tolgoi-nav">
       <a href="#home">Эхлэл</a>
-      <a href="#book">Нислэг</a>
-      <a href="#explore">Аялал</a>
+      <a href="#nisleg-heseg">Нислэг</a>
+      <a href="#aylal-heseg">Аялал</a>
       <a href="#help">Бидний тухай</a>
     </nav>
 
     <div class="tolgoi-actions">
-      <button class="icon-tovch" aria-label="Search">🔍</button>
-      <button class="icon-tovch cart-tovch">
+      <button class="icon-tovch" aria-label="Search" type="button">🔍</button>
+
+      <button class="icon-tovch cart-tovch" type="button" onclick="toggleCart()">
         🛒
         <span class="cart-count" id="cartCount">0</span>
       </button>
-      <button class="icon-tovch theme-tovch" id="themeToggle">🌙</button>
+
+      <button class="icon-tovch theme-tovch" id="themeToggle" type="button">🌙</button>
     </div>
   </header>
 
@@ -48,26 +50,28 @@
       <p class="hero-sub">
         Wanderlust-тэй хамтдаа аялацгаая — жаргалтай дурсамж бүтээлцэх аялалуудыг хамтдаа
       </p>
-      <div class="hero-cta">
-        <a class="hero-tovch" href="#book">Нислэг хайх</a>
-        <a class="hero-tovch ghost" href="#explore">Аялалууд</a>
+
+      <div class="tab-heseg">
+        <button class="tab-tovch active" data-target="#nisleg-heseg" type="button">Нислэг хайх</button>
+        <button class="tab-tovch" data-target="#aylal-heseg" type="button">Аялалууд</button>
       </div>
     </div>
   </section>
 
-  <section class="nisleg-heseg">
+  <section id="nisleg-heseg">
     <div class="nisleg-husnegt">
 
       <div class="nisleg-box">
         <button class="box active" type="button" data-mode="oneway">Нэг талдаа</button>
-        <button class="box" type="button" data-mode="olon-hot">Олон хот</button>
+        <button class="box" type="button" data-mode="olon-hot">Дамжин нислэг</button>
       </div>
 
       <a class="rewards-link" href="#">Log in to book Classic Rewards</a>
 
-      <form class="nisleg-form">
+      <form class="nisleg-form" id="nislegForm">
 
         <div class="nislegs-area">
+
           <div class="nisleg-row">
             <div class="nisleg-label">Нислэг 1</div>
 
@@ -88,23 +92,23 @@
           </div>
 
           <div class="nisleg-row olon-hot-only">
-          <div class="nisleg-label">Нислэг 2</div>
+            <div class="nisleg-label">Нислэг 2</div>
 
-          <div class="field">
-            <label>Хаанаас</label>
-            <input type="text" placeholder="Улаанбаатар" />
-          </div>
+            <div class="field">
+              <label>Хаанаас</label>
+              <input type="text" placeholder="Улаанбаатар" />
+            </div>
 
-          <div class="field">
-            <label>Хаашаа</label>
-            <input type="text" placeholder="Сөүл" />
-          </div>
+            <div class="field">
+              <label>Хаашаа</label>
+              <input type="text" placeholder="Сөүл" />
+            </div>
 
-          <div class="field">
-            <label>Хэзээ</label>
-            <input type="text" placeholder="12/17/2025" />
+            <div class="field">
+              <label>Хэзээ</label>
+              <input type="text" placeholder="12/17/2025" />
+            </div>
           </div>
-        </div>
 
           <button class="add-nisleg olon-hot-only" type="button" id="addnislegtovch">
             <span class="add-plus">+</span>
@@ -184,128 +188,143 @@
     </div>
   </section>
 
-  <section class="cards-heseg">
+  <section class="cards-heseg" id="aylal-heseg">
     <div class="cards-husnegt">
       <h2 class="cards-title">Аяллын багцууд</h2>
 
       <div class="cards-row">
         <div class="card">
-          <img src="biy-daalt/Fuji.jpg" alt="Япон - Токио">
+          <img src="Fuji.jpg" alt="Япон - Токио">
           <h3>Япон - Токио</h3>
           <div class="price">$120</div>
-          <button class="tovch" onclick="addToCart('Япон - Токио',120)">Add to Cart</button>
+          <button class="tovch" type="button" onclick="addToCart('Япон - Токио',120)">Add to Cart</button>
         </div>
-
-        <div class="card">
-          <img src="biy-daalt/Himeji Castle.jpg" alt="Солонгос - Сөүл">
-          <h3>Солонгос - Сөүл</h3>
-          <div class="price">$80</div>
-          <button class="tovch" onclick="addToCart('Солонгос - Сөүл',80)">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <img src="biy-daalt/Miyagawa-Cho Street.jpg" alt="Хятад - Бээжин">
-          <h3>Хятад - Бээжин</h3>
-          <div class="price">$150</div>
-          <button class="tovch" onclick="addToCart('Хятад - Бээжин',150)">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <img src="biy-daalt/Todaiji Temple.jpg" alt="Вьетнам - Фукок">
-          <h3>Вьетнам - Фукок</h3>
-          <div class="price">$60</div>
-          <button class="tovch" onclick="addToCart('Вьетнам - Фукок',60)">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <img src="biy-daalt/austria.jpg" alt="Австри - Вена">
-          <h3>Австри - Вена</h3>
-          <div class="price">$120</div>
-          <button class="tovch" onclick="addToCart('Австри - Вена',120)">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <img src="biy-daalt/belgium.jfif" alt="Бельги - Брюссель">
-          <h3>Бельги - Брюссель</h3>
-          <div class="price">$80</div>
-          <button class="tovch" onclick="addToCart('Бельги - Брюссель',80)">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <img src="biy-daalt/czech.webp" alt="Чех - Праг">
-          <h3>Чех - Праг</h3>
-          <div class="price">$150</div>
-          <button class="tovch" onclick="addToCart('Чех - Праг',150)">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <img src="biy-daalt/denmark.jfif" alt="Дани - Копенхаген">
-          <h3>Дани - Копенхаген</h3>
-          <div class="price">$60</div>
-          <button class="tovch" onclick="addToCart('Дани - Копенхаген',60)">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <img src="biy-daalt/germany.webp" alt="Герман - Берлин">
-          <h3>Герман - Берлин</h3>
-          <div class="price">$80</div>
-          <button class="tovch" onclick="addToCart('Герман - Берлин',80)">Add to Cart</button>
-        </div>
-      </div>
-    </div>
+      
+          
+      <div class="card"> <img src="seoul.jpg" alt="Солонгос - Сөүл"> 
+        <h3>Солонгос - Сөүл</h3>
+        <div class="price">$80</div> 
+        <button class="tovch" onclick="addToCart('Солонгос - Сөүл',80)">Add to Cart</button> 
+      </div> 
+      <div class="card"> 
+        <img src="china.webp" alt="Хятад - Бээжин"> 
+        <h3>Хятад - Бээжин</h3> 
+        <div class="price">$150</div> 
+        <button class="tovch" onclick="addToCart('Хятад - Бээжин',150)">Add to Cart</button> 
+      </div> 
+      <div class="card"> <img src="vietnam.jfif" alt="Вьетнам - Фукок"> 
+        <h3>Вьетнам - Фукок</h3> 
+        <div class="price">$60</div> 
+        <button class="tovch" onclick="addToCart('Вьетнам - Фукок',60)">Add to Cart</button> 
+      </div> 
+      <div class="card"> <img src="austria.jpg" alt="Австри - Вена"> 
+        <h3>Австри - Вена</h3> <div class="price">$120</div> 
+        <button class="tovch" onclick="addToCart('Австри - Вена',120)">Add to Cart</button> 
+      </div> <div class="card"> <img src="belgium.jfif" alt="Бельги - Брюссель"> 
+        <h3>Бельги - Брюссель</h3> 
+        <div class="price">$80</div> 
+        <button class="tovch" onclick="addToCart('Бельги - Брюссель',80)">Add to Cart</button> </div> 
+        <div class="card"> 
+          <img src="czech.webp" alt="Чех - Праг"> 
+          <h3>Чех - Праг</h3> 
+          <div class="price">$150</div> 
+          <button class="tovch" onclick="addToCart('Чех - Праг',150)">Add to Cart</button> </div> 
+          <div class="card"> <img src="denmark.jfif" alt="Дани - Копенхаген"> 
+            <h3>Дани - Копенхаген</h3> 
+            <div class="price">$60</div> 
+            <button class="tovch" onclick="addToCart('Дани - Копенхаген',60)">Add to Cart</button> 
+          </div> 
+          <div class="card"> <img src="germany.webp" alt="Герман - Берлин"> 
+            <h3>Герман - Берлин</h3> 
+            <div class="price">$80</div>
+              <button class="tovch" onclick="addToCart('Герман - Берлин',80)">Add to Cart</button> 
+          </div> 
+        </div> 
+      </div> 
   </section>
-
   <div class="modal" id="cartModal">
     <div class="modal-content">
       <h2>Таны сагс</h2>
       <div id="cartItems"></div>
-      <button class="tovch close" onclick="toggleCart()">Хаах</button>
+      <button class="tovch close" type="button" onclick="toggleCart()">Хаах</button>
     </div>
   </div>
+
+  <footer class="tugsul-heseg" id="help">
+    <div class="tugsul-dotor">
+
+      <div class="tugsul-bagana">
+        <h4 class="tugsul-garchig">Бидний тухай</h4>
+        <a href="#">Бидний туршлага</a>
+        <a href="#">Хэрэглэгчтэй харилцах төв</a>
+        <a href="#">Нээлттэй ажлын байр</a>
+        <a href="#">Холбоо барих</a>
+      </div>
+
+      <div class="tugsul-bagana">
+        <h4 class="tugsul-garchig">Тусламж</h4>
+        <a href="#">Асуулт хариулт</a>
+        <a href="#">Аялал бүртгүүлэх заавар</a>
+        <a href="#">Бичиг баримт бүрдүүлэх заавар</a>
+      </div>
+
+      <div class="tugsul-bagana">
+        <h4 class="tugsul-garchig">Захиалга</h4>
+        <a href="#">Нислэг захиалах</a>
+        <a href="#">Аялалд бүртгүүлэх</a>
+        <a href="#">Аяллын даатгал</a>
+        <a href="#">Угтах тосох үйлчилгээ</a>
+      </div>
+
+    </div>
+
+    <div class="tugsul-doosh">
+      © 2025 Wanderlust Аялал зуучлалын агентлаг
+    </div>
+  </footer>
+
   <script>
-  const toggle = document.getElementById("themeToggle");
+    const toggle = document.getElementById("themeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
 
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
+    const heroTabs = document.querySelectorAll(".tab-tovch");
+    heroTabs.forEach(btn => {
+      btn.addEventListener("click", () => {
+        heroTabs.forEach(x => x.classList.remove("active"));
+        btn.classList.add("active");
+        const target = document.querySelector(btn.dataset.target);
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
 
-    toggle.textContent =
-      document.body.classList.contains("dark") ? "☀️" : "🌙";
-  });
-  </script>
-
-  <script>
-    const box = document.querySelectorAll(".box");
+    const modeBtns = document.querySelectorAll(".box");
     const multiOnlyEls = document.querySelectorAll(".olon-hot-only");
 
     function setMode(mode){
       const isMulti = mode === "olon-hot";
-
       multiOnlyEls.forEach(el => {
         if (!isMulti) {
           el.style.display = "none";
           return;
         }
-
-        if (el.classList.contains("nisleg-row")) {
-          el.style.display = "grid";
-        } else if (el.classList.contains("add-nisleg")) {
-          el.style.display = "flex";
-        } else {
-          el.style.display = ""; 
-        }
+        if (el.classList.contains("nisleg-row")) el.style.display = "grid";
+        else if (el.classList.contains("add-nisleg")) el.style.display = "flex";
+        else el.style.display = "";
       });
     }
 
-    box.forEach(box => {
-      box.addEventListener("click", () => {
-        box.forEach(t => t.classList.remove("active"));
-        box.classList.add("active");
-        setMode(box.dataset.mode);
+    modeBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        modeBtns.forEach(x => x.classList.remove("active"));
+        btn.classList.add("active");
+        setMode(btn.dataset.mode);
       });
     });
 
-    setMode("return");
-
+    setMode("oneway"); 
 
     (function () {
       const trigger = document.getElementById('paxTrigger');
@@ -402,7 +421,6 @@
       updateUI();
     })();
 
-    /* -------- Simple cart (placeholder) -------- */
     let cart = [];
     function addToCart(name, price){
       cart.push({name, price});
@@ -417,37 +435,4 @@
   </script>
 
 </body>
-
-<footer class="tugsul-heseg">
-  <div class="tugsul-dotor">
-
-    <div class="tugsul-bagana">
-      <h4 class="tugsul-garchig">Бидний тухай</h4>
-      <a href="#">Бидний туршлага</a>
-      <a href="#">Хэрэглэгчтэй харилцах төв</a>
-      <a href="#">Нээлттэй ажлын байр</a>
-      <a href="#">Холбоо барих</a>
-    </div>
-
-    <div class="tugsul-bagana">
-      <h4 class="tugsul-garchig">Тусламж</h4>
-      <a href="#">Асуулт хариулт</a>
-      <a href="#">Аялал бүртгүүлэх заавар</a>
-      <a href="#">Бичиг баримт бүрдүүлэлэх заавар</a>
-    </div>
-
-    <div class="tugsul-bagana">
-      <h4 class="tugsul-garchig">Захилга</h4>
-      <a href="#">Нислэг захиалах</a>
-      <a href="#">Аялалд бүртгүүлэх</a>
-      <a href="#">Аялалын даатгал</a>
-      <a href="#">Угтах тосох үйлчиллгээ</a>
-    </div>
-
-  </div>
-
-  <div class="tugsul-doosh">
-    © 2025 Wanderlust Аялал зуучлалын агентлаг ·
-  </div>
-</footer>
 </html>
